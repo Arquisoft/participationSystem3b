@@ -3,8 +3,8 @@ package es.uniovi.asw.business.impl;
 import es.uniovi.asw.business.CitizenService;
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
-import es.uniovi.asw.model.VotosComentarios;
-import es.uniovi.asw.model.VotosSugerencias;
+import es.uniovi.asw.model.VotoComentario;
+import es.uniovi.asw.model.VotoSugerencia;
 
 public class CitizenServiceImpl extends SuperService implements CitizenService {
 	
@@ -38,13 +38,13 @@ public class CitizenServiceImpl extends SuperService implements CitizenService {
 	}
 
 	@Override
-	public void voteSugerencia(VotosSugerencias voto) {
+	public void voteSugerencia(VotoSugerencia voto) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void voteComentario(VotosComentarios voto) {
+	public void voteComentario(VotoComentario voto) {
 		// TODO Auto-generated method stub
 		
 	}
