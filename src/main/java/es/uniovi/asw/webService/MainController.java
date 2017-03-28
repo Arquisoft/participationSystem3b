@@ -1,4 +1,4 @@
-package hello;
+package es.uniovi.asw.webService;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,17 +6,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import hello.producers.KafkaProducer;
+
+import es.uniovi.asw.producers.KafkaProducer;
 
 @Controller
 public class MainController {
-
-    @Autowired
-    private KafkaProducer kafkaProducer;
-
+	
+	 @Autowired
+	 private KafkaProducer kafkaProducer;
+	 
     @RequestMapping("/")
     public String landing(Model model) {
-        model.addAttribute("message", new Message());
+    	model.addAttribute("message", new Message());
         return "index";
     }
     

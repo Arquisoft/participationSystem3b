@@ -17,8 +17,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.client.RestTemplate;
 
-import hello.Application;
-import hello.UserInfo;
+import com.sun.jna.platform.win32.Netapi32Util.UserInfo;
+
+import es.uniovi.asw.Application;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
@@ -49,7 +50,7 @@ public class MainControllerTest {
 	public void getUser() throws Exception {
 		String userURI = base.toString() + "/user";  
 		ResponseEntity<String> response = template.getForEntity(userURI, String.class);
-		UserInfo expected = new UserInfo("pepe",0);
+		//UserInfo expected = new UserInfo("pepe",0);
 	}
 
 }

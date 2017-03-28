@@ -1,4 +1,4 @@
-package hello;
+package es.uniovi.asw.webService;
 
 /**
  * Created by herminio on 27/2/17.
