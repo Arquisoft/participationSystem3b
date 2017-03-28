@@ -39,7 +39,7 @@ public class MainControllerTest {
 		template = new TestRestTemplate();
 	}
 
-	@Test
+/*	@Test
 	public void getLanding() throws Exception {
 		String userURI = base.toString() + "/user";  
 		ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
@@ -52,5 +52,5 @@ public class MainControllerTest {
 		ResponseEntity<String> response = template.getForEntity(userURI, String.class);
 		//UserInfo expected = new UserInfo("pepe",0);
 	}
-
+*/
 }
