@@ -1,0 +1,375 @@
+[EL Fine]: server: 2017-03-28 21:25:56.413--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2017-03-28 21:25:56.72--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Sugerencia] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.725--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-03-28 21:25:56.727--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field categoria] is being defaulted to: class es.uniovi.asw.model.Categoria.
+[EL Config]: metadata: 2017-03-28 21:25:56.729--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.729--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.729--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Comentario] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.729--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-03-28 21:25:56.73--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.73--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.73--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Categoria] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.731--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.731--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoComentario] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.731--ServerSession(136936250)--Thread(Thread[main,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-03-28 21:25:56.731--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-03-28 21:25:56.731--ServerSession(136936250)--Thread(Thread[main,5,main])--The element [field comentario] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-03-28 21:25:56.732--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field comentario] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.732--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoSugerencia] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.732--ServerSession(136936250)--Thread(Thread[main,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-03-28 21:25:56.732--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-03-28 21:25:56.732--ServerSession(136936250)--Thread(Thread[main,5,main])--The element [field sugerencia] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-03-28 21:25:56.733--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.733--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Administrador] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.733--ServerSession(136936250)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Citizen] is set to [FIELD].
+[EL Config]: metadata: 2017-03-28 21:25:56.733--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votosComentarios] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.733--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votosSugerencias] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.734--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.734--ServerSession(136936250)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.734--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Sugerencia] is being defaulted to: Sugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.744--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
+[EL Config]: metadata: 2017-03-28 21:25:56.744--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [estado] is being defaulted to: ESTADO.
+[EL Config]: metadata: 2017-03-28 21:25:56.745--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [titulo] is being defaulted to: TITULO.
+[EL Config]: metadata: 2017-03-28 21:25:56.745--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.745--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Comentario] is being defaulted to: Comentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.745--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
+[EL Config]: metadata: 2017-03-28 21:25:56.746--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.746--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Categoria] is being defaulted to: Categoria.
+[EL Config]: metadata: 2017-03-28 21:25:56.746--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [palabrasNoPermitidas] is being defaulted to: PALABRASNOPERMITIDAS.
+[EL Config]: metadata: 2017-03-28 21:25:56.747--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [fechaInicio] is being defaulted to: FECHAINICIO.
+[EL Config]: metadata: 2017-03-28 21:25:56.748--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [minimoVotos] is being defaulted to: MINIMOVOTOS.
+[EL Config]: metadata: 2017-03-28 21:25:56.748--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.748--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
+[EL Config]: metadata: 2017-03-28 21:25:56.748--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [fechaFin] is being defaulted to: FECHAFIN.
+[EL Config]: metadata: 2017-03-28 21:25:56.748--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoComentario] is being defaulted to: VotoComentario.
+[EL Config]: metadata: 2017-03-28 21:25:56.749--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
+[EL Config]: metadata: 2017-03-28 21:25:56.749--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoSugerencia] is being defaulted to: VotoSugerencia.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Administrador] is being defaulted to: Administrador.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Citizen] is being defaulted to: Citizen.
+[EL Config]: metadata: 2017-03-28 21:25:56.75--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [apellidos] is being defaulted to: APELLIDOS.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [fechaNacimiento] is being defaulted to: FECHANACIMIENTO.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [direccion] is being defaulted to: DIRECCION.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [nacionalidad] is being defaulted to: NACIONALIDAD.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Config]: metadata: 2017-03-28 21:25:56.751--ServerSession(136936250)--Thread(Thread[main,5,main])--The column name for element [DNI] is being defaulted to: DNI.
+[EL Config]: metadata: 2017-03-28 21:25:56.758--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.758--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.758--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field comentario] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.759--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [comentario] is being defaulted to: COMENTARIO_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.759--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.759--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.759--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.759--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.76--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.76--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.76--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field categoria] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.76--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [categoria] is being defaulted to: CATEGORIA_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.761--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.761--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.761--ServerSession(136936250)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
+[EL Config]: metadata: 2017-03-28 21:25:56.761--ServerSession(136936250)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
+[EL Info]: 2017-03-28 21:25:57.342--ServerSession(136936250)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
+[EL Fine]: connection: 2017-03-28 21:25:57.541--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.HSQLPlatform
+[EL Config]: connection: 2017-03-28 21:25:57.56--ServerSession(136936250)--Connection(718904563)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+	platform=>HSQLPlatform
+	user name=> "sa"
+	datasource URL=> "jdbc:hsqldb:hsql://localhost"
+))
+[EL Config]: connection: 2017-03-28 21:25:57.668--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--Connected: jdbc:hsqldb:hsql://localhost
+	User: SA
+	Database: HSQL Database Engine  Version: 2.2.9
+	Driver: HSQL Database Engine Driver  Version: 2.2.9
+[EL Info]: connection: 2017-03-28 21:25:57.785--ServerSession(136936250)--Thread(Thread[main,5,main])--/file:/C:/Users/Seila/Desktop/ASW/participationSystem3b/target/classes/_citizens login successful
+[EL Fine]: sql: 2017-03-28 21:25:57.795--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TSugerencia DROP CONSTRAINT FK_TSugerencia_CITIZEN_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.798--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.799--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TSUGERENCIA
+Error Code: -5501
+Call: ALTER TABLE TSugerencia DROP CONSTRAINT FK_TSugerencia_CITIZEN_ID
+Query: DataModifyQuery(sql="ALTER TABLE TSugerencia DROP CONSTRAINT FK_TSugerencia_CITIZEN_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.8--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TSugerencia DROP CONSTRAINT FK_TSugerencia_CATEGORIA_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.8--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.801--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TSUGERENCIA
+Error Code: -5501
+Call: ALTER TABLE TSugerencia DROP CONSTRAINT FK_TSugerencia_CATEGORIA_ID
+Query: DataModifyQuery(sql="ALTER TABLE TSugerencia DROP CONSTRAINT FK_TSugerencia_CATEGORIA_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.801--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoSugerencia DROP CONSTRAINT FK_TVotoSugerencia_CITIZEN_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.801--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.801--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TVOTOSUGERENCIA
+Error Code: -5501
+Call: ALTER TABLE TVotoSugerencia DROP CONSTRAINT FK_TVotoSugerencia_CITIZEN_ID
+Query: DataModifyQuery(sql="ALTER TABLE TVotoSugerencia DROP CONSTRAINT FK_TVotoSugerencia_CITIZEN_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.801--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoSugerencia DROP CONSTRAINT FK_TVotoSugerencia_SUGERENCIA_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.802--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.802--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TVOTOSUGERENCIA
+Error Code: -5501
+Call: ALTER TABLE TVotoSugerencia DROP CONSTRAINT FK_TVotoSugerencia_SUGERENCIA_ID
+Query: DataModifyQuery(sql="ALTER TABLE TVotoSugerencia DROP CONSTRAINT FK_TVotoSugerencia_SUGERENCIA_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.802--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoComentario DROP CONSTRAINT FK_TVotoComentario_COMENTARIO_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.802--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.803--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TVOTOCOMENTARIO
+Error Code: -5501
+Call: ALTER TABLE TVotoComentario DROP CONSTRAINT FK_TVotoComentario_COMENTARIO_ID
+Query: DataModifyQuery(sql="ALTER TABLE TVotoComentario DROP CONSTRAINT FK_TVotoComentario_COMENTARIO_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.803--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoComentario DROP CONSTRAINT FK_TVotoComentario_CITIZEN_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.803--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.803--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TVOTOCOMENTARIO
+Error Code: -5501
+Call: ALTER TABLE TVotoComentario DROP CONSTRAINT FK_TVotoComentario_CITIZEN_ID
+Query: DataModifyQuery(sql="ALTER TABLE TVotoComentario DROP CONSTRAINT FK_TVotoComentario_CITIZEN_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.803--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TComentario DROP CONSTRAINT FK_TComentario_SUGERENCIA_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.803--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.804--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TCOMENTARIO
+Error Code: -5501
+Call: ALTER TABLE TComentario DROP CONSTRAINT FK_TComentario_SUGERENCIA_ID
+Query: DataModifyQuery(sql="ALTER TABLE TComentario DROP CONSTRAINT FK_TComentario_SUGERENCIA_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.804--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TComentario DROP CONSTRAINT FK_TComentario_CITIZEN_ID
+[EL Fine]: sql: 2017-03-28 21:25:57.804--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.804--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: PUBLIC.TCOMENTARIO
+Error Code: -5501
+Call: ALTER TABLE TComentario DROP CONSTRAINT FK_TComentario_CITIZEN_ID
+Query: DataModifyQuery(sql="ALTER TABLE TComentario DROP CONSTRAINT FK_TComentario_CITIZEN_ID")
+[EL Fine]: sql: 2017-03-28 21:25:57.804--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.805--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.805--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TSUGERENCIA in statement [DROP TABLE TSugerencia]
+Error Code: -5501
+Call: DROP TABLE TSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.805--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.805--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.806--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOSUGERENCIA in statement [DROP TABLE TVotoSugerencia]
+Error Code: -5501
+Call: DROP TABLE TVotoSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TVotoSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.806--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TCategoria
+[EL Fine]: sql: 2017-03-28 21:25:57.806--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.806--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCATEGORIA in statement [DROP TABLE TCategoria]
+Error Code: -5501
+Call: DROP TABLE TCategoria
+Query: DataModifyQuery(sql="DROP TABLE TCategoria")
+[EL Fine]: sql: 2017-03-28 21:25:57.807--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.807--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.807--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOCOMENTARIO in statement [DROP TABLE TVotoComentario]
+Error Code: -5501
+Call: DROP TABLE TVotoComentario
+Query: DataModifyQuery(sql="DROP TABLE TVotoComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.807--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TAdministrador
+[EL Fine]: sql: 2017-03-28 21:25:57.808--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.808--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TADMINISTRADOR in statement [DROP TABLE TAdministrador]
+Error Code: -5501
+Call: DROP TABLE TAdministrador
+Query: DataModifyQuery(sql="DROP TABLE TAdministrador")
+[EL Fine]: sql: 2017-03-28 21:25:57.808--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.808--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.809--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCOMENTARIO in statement [DROP TABLE TComentario]
+Error Code: -5501
+Call: DROP TABLE TComentario
+Query: DataModifyQuery(sql="DROP TABLE TComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.809--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TCitizens
+[EL Fine]: sql: 2017-03-28 21:25:57.809--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.809--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.81--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TSUGERENCIA in statement [DROP TABLE TSugerencia]
+Error Code: -5501
+Call: DROP TABLE TSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.81--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.81--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.81--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOSUGERENCIA in statement [DROP TABLE TVotoSugerencia]
+Error Code: -5501
+Call: DROP TABLE TVotoSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TVotoSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.811--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TCategoria
+[EL Fine]: sql: 2017-03-28 21:25:57.811--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.811--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCATEGORIA in statement [DROP TABLE TCategoria]
+Error Code: -5501
+Call: DROP TABLE TCategoria
+Query: DataModifyQuery(sql="DROP TABLE TCategoria")
+[EL Fine]: sql: 2017-03-28 21:25:57.811--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.811--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.812--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOCOMENTARIO in statement [DROP TABLE TVotoComentario]
+Error Code: -5501
+Call: DROP TABLE TVotoComentario
+Query: DataModifyQuery(sql="DROP TABLE TVotoComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.812--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TAdministrador
+[EL Fine]: sql: 2017-03-28 21:25:57.812--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.812--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TADMINISTRADOR in statement [DROP TABLE TAdministrador]
+Error Code: -5501
+Call: DROP TABLE TAdministrador
+Query: DataModifyQuery(sql="DROP TABLE TAdministrador")
+[EL Fine]: sql: 2017-03-28 21:25:57.813--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.813--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.813--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCOMENTARIO in statement [DROP TABLE TComentario]
+Error Code: -5501
+Call: DROP TABLE TComentario
+Query: DataModifyQuery(sql="DROP TABLE TComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.813--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.814--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.814--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TSUGERENCIA in statement [DROP TABLE TSugerencia]
+Error Code: -5501
+Call: DROP TABLE TSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.814--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.814--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.815--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOSUGERENCIA in statement [DROP TABLE TVotoSugerencia]
+Error Code: -5501
+Call: DROP TABLE TVotoSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TVotoSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.815--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TCategoria
+[EL Fine]: sql: 2017-03-28 21:25:57.815--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.815--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCATEGORIA in statement [DROP TABLE TCategoria]
+Error Code: -5501
+Call: DROP TABLE TCategoria
+Query: DataModifyQuery(sql="DROP TABLE TCategoria")
+[EL Fine]: sql: 2017-03-28 21:25:57.815--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.816--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.816--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOCOMENTARIO in statement [DROP TABLE TVotoComentario]
+Error Code: -5501
+Call: DROP TABLE TVotoComentario
+Query: DataModifyQuery(sql="DROP TABLE TVotoComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.816--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TAdministrador
+[EL Fine]: sql: 2017-03-28 21:25:57.816--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.817--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TADMINISTRADOR in statement [DROP TABLE TAdministrador]
+Error Code: -5501
+Call: DROP TABLE TAdministrador
+Query: DataModifyQuery(sql="DROP TABLE TAdministrador")
+[EL Fine]: sql: 2017-03-28 21:25:57.817--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.817--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.817--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCOMENTARIO in statement [DROP TABLE TComentario]
+Error Code: -5501
+Call: DROP TABLE TComentario
+Query: DataModifyQuery(sql="DROP TABLE TComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.817--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.817--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.818--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TSUGERENCIA in statement [DROP TABLE TSugerencia]
+Error Code: -5501
+Call: DROP TABLE TSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.818--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.818--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.818--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOSUGERENCIA in statement [DROP TABLE TVotoSugerencia]
+Error Code: -5501
+Call: DROP TABLE TVotoSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TVotoSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.819--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TCategoria
+[EL Fine]: sql: 2017-03-28 21:25:57.819--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.819--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCATEGORIA in statement [DROP TABLE TCategoria]
+Error Code: -5501
+Call: DROP TABLE TCategoria
+Query: DataModifyQuery(sql="DROP TABLE TCategoria")
+[EL Fine]: sql: 2017-03-28 21:25:57.819--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.819--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.82--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOCOMENTARIO in statement [DROP TABLE TVotoComentario]
+Error Code: -5501
+Call: DROP TABLE TVotoComentario
+Query: DataModifyQuery(sql="DROP TABLE TVotoComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.82--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TAdministrador
+[EL Fine]: sql: 2017-03-28 21:25:57.82--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.82--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TADMINISTRADOR in statement [DROP TABLE TAdministrador]
+Error Code: -5501
+Call: DROP TABLE TAdministrador
+Query: DataModifyQuery(sql="DROP TABLE TAdministrador")
+[EL Fine]: sql: 2017-03-28 21:25:57.82--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.821--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.821--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCOMENTARIO in statement [DROP TABLE TComentario]
+Error Code: -5501
+Call: DROP TABLE TComentario
+Query: DataModifyQuery(sql="DROP TABLE TComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.821--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.821--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.822--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TSUGERENCIA in statement [DROP TABLE TSugerencia]
+Error Code: -5501
+Call: DROP TABLE TSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.822--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoSugerencia
+[EL Fine]: sql: 2017-03-28 21:25:57.822--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.822--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOSUGERENCIA in statement [DROP TABLE TVotoSugerencia]
+Error Code: -5501
+Call: DROP TABLE TVotoSugerencia
+Query: DataModifyQuery(sql="DROP TABLE TVotoSugerencia")
+[EL Fine]: sql: 2017-03-28 21:25:57.822--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TCategoria
+[EL Fine]: sql: 2017-03-28 21:25:57.822--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.823--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCATEGORIA in statement [DROP TABLE TCategoria]
+Error Code: -5501
+Call: DROP TABLE TCategoria
+Query: DataModifyQuery(sql="DROP TABLE TCategoria")
+[EL Fine]: sql: 2017-03-28 21:25:57.823--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TVotoComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.823--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.823--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TVOTOCOMENTARIO in statement [DROP TABLE TVotoComentario]
+Error Code: -5501
+Call: DROP TABLE TVotoComentario
+Query: DataModifyQuery(sql="DROP TABLE TVotoComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.824--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TAdministrador
+[EL Fine]: sql: 2017-03-28 21:25:57.824--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.824--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TADMINISTRADOR in statement [DROP TABLE TAdministrador]
+Error Code: -5501
+Call: DROP TABLE TAdministrador
+Query: DataModifyQuery(sql="DROP TABLE TAdministrador")
+[EL Fine]: sql: 2017-03-28 21:25:57.824--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--DROP TABLE TComentario
+[EL Fine]: sql: 2017-03-28 21:25:57.824--ServerSession(136936250)--Thread(Thread[main,5,main])--CALL 1
+[EL Warning]: 2017-03-28 21:25:57.825--ServerSession(136936250)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: usuario no tiene privilegios suficientes o objeto no encontrado: TCOMENTARIO in statement [DROP TABLE TComentario]
+Error Code: -5501
+Call: DROP TABLE TComentario
+Query: DataModifyQuery(sql="DROP TABLE TComentario")
+[EL Fine]: sql: 2017-03-28 21:25:57.825--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TSugerencia (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, CONTENIDO VARCHAR(255), ESTADO VARCHAR(255), TITULO VARCHAR(255), CATEGORIA_ID BIGINT, CITIZEN_ID BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.826--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TVotoSugerencia (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, SUGERENCIA_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, SUGERENCIA_ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.826--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TCategoria (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, FECHAFIN DATE, FECHAINICIO DATE, MINIMOVOTOS INTEGER, NOMBRE VARCHAR(255), PALABRASNOPERMITIDAS LONGVARBINARY, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.827--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TVotoComentario (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, COMENTARIO_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, COMENTARIO_ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.827--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TAdministrador (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, PASSWORD VARCHAR(255), USUARIO VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.828--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TComentario (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, CONTENIDO VARCHAR(255), CITIZEN_ID BIGINT, SUGERENCIA_ID BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.828--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--CREATE TABLE TCitizens (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, DNI VARCHAR(255), APELLIDOS VARCHAR(255), DIRECCION VARCHAR(255), EMAIL VARCHAR(255), FECHANACIMIENTO DATE, NACIONALIDAD VARCHAR(255), NOMBRE VARCHAR(255), PASSWORD VARCHAR(255), USUARIO VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-03-28 21:25:57.829--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TSugerencia ADD CONSTRAINT FK_TSugerencia_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCitizens (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.829--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TSugerencia ADD CONSTRAINT FK_TSugerencia_CATEGORIA_ID FOREIGN KEY (CATEGORIA_ID) REFERENCES TCategoria (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.83--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoSugerencia ADD CONSTRAINT FK_TVotoSugerencia_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCitizens (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.83--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoSugerencia ADD CONSTRAINT FK_TVotoSugerencia_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSugerencia (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.831--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoComentario ADD CONSTRAINT FK_TVotoComentario_COMENTARIO_ID FOREIGN KEY (COMENTARIO_ID) REFERENCES TComentario (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.832--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TVotoComentario ADD CONSTRAINT FK_TVotoComentario_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCitizens (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.832--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TComentario ADD CONSTRAINT FK_TComentario_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSugerencia (ID)
+[EL Fine]: sql: 2017-03-28 21:25:57.833--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--ALTER TABLE TComentario ADD CONSTRAINT FK_TComentario_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCitizens (ID)
+[EL Config]: connection: 2017-03-28 21:25:57.845--ServerSession(136936250)--Connection(1865539378)--Thread(Thread[main,5,main])--disconnect
+[EL Info]: connection: 2017-03-28 21:25:57.845--ServerSession(136936250)--Thread(Thread[main,5,main])--/file:/C:/Users/Seila/Desktop/ASW/participationSystem3b/target/classes/_citizens logout successful
+[EL Config]: connection: 2017-03-28 21:25:57.845--ServerSession(136936250)--Connection(718904563)--Thread(Thread[main,5,main])--disconnect

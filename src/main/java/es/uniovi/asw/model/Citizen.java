@@ -36,9 +36,9 @@ public class Citizen implements Serializable{
 	@OneToMany(mappedBy="citizen") 
 	private Set<Comentario> comentarios = new HashSet<>();
 	@OneToMany(mappedBy="citizen") 
-	private Set<VotosComentarios> votosComentarios = new HashSet<>();
+	private Set<VotoComentario> votosComentarios = new HashSet<>();
 	@OneToMany(mappedBy="citizen") 
-	private Set<VotosSugerencias> votosSugerencias = new HashSet<>();
+	private Set<VotoSugerencia> votosSugerencias = new HashSet<>();
 
 	
 	
@@ -154,6 +154,36 @@ public class Citizen implements Serializable{
 		this.usuario = usuario;
 	}
 
+    
+    Set<Sugerencia> _getSugerencias() {
+		return sugerencias;
+	}
+
+	public Set<Sugerencia> getSugerencias() {
+		return new HashSet<>(sugerencias);
+	}
+	Set<Comentario> _getComentarios() {
+		return comentarios;
+	}
+	public Set<Comentario> getComentarios() {
+		return new HashSet<>(comentarios);
+	}
+
+	Set<VotoComentario> _getVotosComentarios() {
+		return votosComentarios;
+	}
+	public Set<VotoComentario> getVotosComentarios() {
+		return new HashSet<>(votosComentarios);
+	}
+
+
+	Set<VotoSugerencia> _getVotosSugerencias() {
+		return votosSugerencias;
+	}
+
+	public Set<VotoSugerencia> getVotosSugerencias() {
+		return new HashSet<>(votosSugerencias);
+	}
 
 	@Override
 	public int hashCode() {
