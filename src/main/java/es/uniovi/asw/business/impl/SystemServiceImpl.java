@@ -3,27 +3,32 @@ package es.uniovi.asw.business.impl;
 import java.util.List;
 
 import es.uniovi.asw.business.SystemService;
+import es.uniovi.asw.business.impl.system.FindAllCategories;
+import es.uniovi.asw.business.impl.system.FindAllSugerencias;
+import es.uniovi.asw.business.impl.system.FindSugerenciaById;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Sugerencia;
+import es.uniovi.asw.model.exception.BusinessException;
 
 public class SystemServiceImpl extends SuperService implements SystemService {
-
+	
+	private CommandExecutor cmd = new CommandExecutor();
+	
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Categoria> findAllCategories() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Categoria> findAllCategories() throws BusinessException {
+		return (List<Categoria>) cmd.execute(new FindAllCategories());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Sugerencia> findAllSugerencias() throws BusinessException {
+		return (List<Sugerencia>) cmd.execute(new FindAllSugerencias());
 	}
 
 	@Override
-	public List<Sugerencia> findAllSugerencias() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Sugerencia findSugerenciaById() {
-		// TODO Auto-generated method stub
-		return null;
+	public Sugerencia findSugerenciaById(Long id) throws BusinessException {
+		return (Sugerencia) cmd.execute(new FindSugerenciaById(id));
 	}
 
 }

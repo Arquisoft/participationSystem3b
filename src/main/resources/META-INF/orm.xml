@@ -13,6 +13,18 @@
 	<named-query name="Citizen.findAll">
 		<query>select c from Citizen c</query>
 	</named-query>
+	
+	<named-query name="Categoria.findAll">
+		<query>select c from Categoria c</query>
+	</named-query>
+	
+	<named-query name="Sugerencia.findAll">
+		<query>select s from Sugerencia s</query>
+	</named-query>
+	
+	<named-query name="Sugerencia.findById">
+		<query>select s from Sugerencia s where s.ID = ?1</query>
+	</named-query>
 
 <!-- 
 	<named-query name="findItemsOnSaleByCategoryId">
