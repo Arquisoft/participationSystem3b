@@ -38,7 +38,8 @@ public class MainController {
     	
     	if(userValidator.validate(username, password,"citi")){
     		session.setAttribute("user", new User(username,password));
-    		return "user";
+    		//session.setAttribute("solicitudes", new Solicitudes(username));
+    		return "listaSolicitudes";
     	}
     	
     	else if(userValidator.validate(username, password,"admin")){
@@ -47,5 +48,11 @@ public class MainController {
     	}
 
     		return "login";	
+    }
+    @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
+    public String AbrirSolicitud(HttpSession session,Model model,@RequestParam String solicitud) {
+    	
+    		//session.setAttribute("solucion", new Solucion(solucion));
+    		return "solicitud";
     }
 }
