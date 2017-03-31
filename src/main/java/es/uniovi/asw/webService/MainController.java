@@ -24,7 +24,7 @@ public class MainController {
     @RequestMapping("/")
     public String landing(Model model) {
     	model.addAttribute("message", new Message());
-        return "index";
+        return "login";
     }
     
     @RequestMapping("/send")
