@@ -23,7 +23,11 @@
 	</named-query>
 	
 	<named-query name="Sugerencia.findById">
-		<query>select s from Sugerencia s where s.ID = ?1</query>
+		<query>select s from Sugerencia s where s.id = ?1</query>
+	</named-query>
+	
+	<named-query name="Sugerencia.findByCategory">
+		<query>select s from Sugerencia s where s.categoria.id = ?1</query>
 	</named-query>
 
 <!-- 

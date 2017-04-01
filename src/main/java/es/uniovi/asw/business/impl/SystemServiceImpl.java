@@ -6,6 +6,7 @@ import es.uniovi.asw.business.SystemService;
 import es.uniovi.asw.business.impl.system.FindAllCategories;
 import es.uniovi.asw.business.impl.system.FindAllSugerencias;
 import es.uniovi.asw.business.impl.system.FindSugerenciaById;
+import es.uniovi.asw.business.impl.system.FindSugerenciasByCategory;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
@@ -29,6 +30,12 @@ public class SystemServiceImpl extends SuperService implements SystemService {
 	@Override
 	public Sugerencia findSugerenciaById(Long id) throws BusinessException {
 		return (Sugerencia) cmd.execute(new FindSugerenciaById(id));
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Sugerencia> findSugerenciasByCategory(Long idCategory) throws BusinessException {
+		return (List<Sugerencia>) cmd.execute(new FindSugerenciasByCategory(idCategory));
 	}
 
 }

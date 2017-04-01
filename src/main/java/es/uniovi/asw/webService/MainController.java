@@ -1,6 +1,8 @@
 package es.uniovi.asw.webService;
 
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import es.uniovi.asw.business.Services;
+import es.uniovi.asw.model.Sugerencia;
+import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.producers.KafkaProducer;
 
 @Controller
@@ -34,11 +39,12 @@ public class MainController {
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(HttpSession session,Model model,@RequestParam String username, @RequestParam String password) {
+    public String login(HttpSession session,Model model,@RequestParam String username, @RequestParam String password) throws BusinessException {
     	
     	if(userValidator.validate(username, password,"citi")){
     		session.setAttribute("user", new User(username,password));
-    		//session.setAttribute("solicitudes", new Solicitudes(username));
+    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
+    		model.addAttribute("sugerencias", sugerencias);
     		return "listaSolicitudes";
     	}
     	
@@ -47,7 +53,7 @@ public class MainController {
     		return "admin";
     	}
 
-    		return "login";	
+    	return "login";	
     }
     @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
     public String AbrirSolicitud(HttpSession session,Model model,@RequestParam String solicitud) {

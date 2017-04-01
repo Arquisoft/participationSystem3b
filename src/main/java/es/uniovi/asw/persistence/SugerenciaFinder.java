@@ -15,4 +15,8 @@ public class SugerenciaFinder {
 		return Jpa.getManager().createNamedQuery("Sugerencia.findById", Sugerencia.class).getSingleResult();
 	}
 
+	public static Object findByCategory(Long idCategory) {
+		return Jpa.getManager().createNamedQuery("Sugerencia.findByCategory", Sugerencia.class).getResultList();
+	}
+
 }
