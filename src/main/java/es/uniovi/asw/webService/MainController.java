@@ -36,7 +36,7 @@ public class MainController {
     	if(userValidator.validate(username, password,"citi")){
     		session.setAttribute("user", new User(username,password));
     		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
-    		model.addAttribute("sugerencias", sugerencias);
+    		model.addAttribute("sugerencias", sugerencias); //Ordenar en un diccionario por categoria / ¿una extra para las propias del usuario? 
     		return "listaSolicitudes";
     	}
     	
@@ -47,10 +47,23 @@ public class MainController {
 
     	return "login";	
     }
-    @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
-    public String AbrirSolicitud(HttpSession session,Model model,@RequestParam String solicitud) {
+    @RequestMapping(value = "/ver", method = RequestMethod.POST)
+    public String AbrirSolicitud(HttpSession session,Model model,@RequestParam String ver) {
     	
-    		//session.setAttribute("solucion", new Solucion(solucion));
+    		model.addAttribute("sol", ver);
     		return "solicitud";
+    }
+    
+    @RequestMapping(value = "/crear", method = RequestMethod.POST)
+    public String CrearSolicitud(HttpSession session,Model model,@RequestParam String ver) {
+    	
+    		return "crearSolicitud";
+    }
+    
+    @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
+    public String ListaSol(HttpSession session,Model model) throws BusinessException {
+	    	List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
+			model.addAttribute("sugerencias", sugerencias);
+    		return "listaSolicitudes";
     }
 }

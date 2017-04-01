@@ -1,58 +1,98 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Solicitud</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous" />
-</head>
-<body>
-<button id="atrasBoton" type="submit" class="btn btn-primary">Atras</button>
-<div class="container">
-<!--SACAR INFO DE LA SESION-->
-	<div class="row">
-		<h2>
-        <div class="nav-container">
-    	  <nav id="nav">
-           <ul>
-               <li>NOMBRE PORPUESTA</li>
-           </ul> 
-    	  </nav>  
+	<head>
+	    <title>Solicitud</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	          crossorigin="anonymous" />
+	</head>
+	<body>
+		<form th:action="@{/listaSolicitudes}" method="POST"> 
+			<button id="atrasBoton" type="submit" class="btn btn-primary">
+				Atras
+			</button>
+		</form> 
+		
+		<div class="container">
+			<!--SACAR INFO DE LA SESION-->
+			<div class="row">
+				<h2>
+			        <div class="nav-container">
+			    	  <nav id="nav">
+				           <ul>
+				               <li th:text="${sol}"></li>
+				           </ul> 
+			    	  </nav>  
+					</div>
+				</h2>
+				<section>DATOS PROPUESTA...</section>
+			</div>
+			<div class="row">
+				<p>
+			       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+			       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
+			       </button>123
+			       
+			       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+			     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
+			       </button>1
+			    </p>
+			</div>
+				<!--HACER BOTONES FUNCIONALES-->
+			<div class="row">
+			            <div class="col-md-8">
+			              <div class="page-header">
+			                <h2>Comentarios </h2>
+			              </div>
+			       	       <!-- ESCRIBIR COMENTARIOS -->
+							<div class="container">
+								<div class="row">
+							    	<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+							  		<script>
+							          tinymce.init({
+							              selector: "textarea",
+							              toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+							          });
+							  		</script>
+					                <!-- the comment box -->
+					            	<div class="well">
+					                    <h4><i class="fa fa-paper-plane-o"></i>Deja tu comentario:</h4>
+					                    <form role="form">
+					                        <div class="form-group">
+					                            <textarea class="form-control" rows="3"></textarea>
+					                        </div>
+					                        <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
+					                    </form>
+					                </div>
+								</div>
+							</div>
+			           		
+					   
+						           <!--FOR COMETARIOS -->
+						   	<div class="comments-list">
+						           <div class="media">
+						                <div class="media-body">
+						                      <h4 class="media-heading user_name">
+						                      		USUARIO
+						                      </h4>
+						                      	Comentario
+						                </div>
+						           </div>
+						    </div>
+						    	<!--end-->
+		    		</div> 
+		     </div> 
 		</div>
-		</h2>
-		<section>DATOS PROPUESTA...</section>
-	</div>
-	<div class="row">
-	<p>
-	<!--IF  NO HAS VOTADO-->
-	<button id="votarBoton" type="submit" class="btn btn-primary">Votar</button>
-	<!--ELSE-->
-	<button id="votarBoton" type="submit" disabled class="btn btn-primary" >Votar</button>
-	
-	Votos: </p>
-	</div>
-	<div class="row">
-	<!--HACER BOTONES FUNCIONALES-->
-
-
-</div></div>
-<div class="container">
-        <div class="row">
-            <div class="col-md-8">
-              <div class="page-header">
-                <h2>Comentarios </h2>
-              </div> 
-               <!--FOR COMETARIOS{ -->
-               <div class="comments-list">
-                   <div class="media">
-                        <div class="media-body">
-                          <h4 class="media-heading user_name">USUARIO</h4>
-                          COMENTARIO
-                        </div>
-                      </div>
-                <!--}-->
-               </div>
-            </div>
-        </div>
-    </div>
-</body>
+		                
+	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
