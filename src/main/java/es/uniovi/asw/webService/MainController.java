@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,14 +27,7 @@ public class MainController {
 	 
     @RequestMapping("/")
     public String landing(Model model) {
-    	model.addAttribute("message", new Message());
         return "login";
-    }
-    
-    @RequestMapping("/send")
-    public String send(Model model, @ModelAttribute Message message) {
-        kafkaProducer.send("exampleTopic", message.getMessage());
-        return "redirect:/";
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
