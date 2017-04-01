@@ -16,6 +16,7 @@ public class DeleteComentario implements Command {
 	@Override
 	public Object execute() throws BusinessException {
 		Comentario comentario = Jpa.getManager().find(Comentario.class, idComentario);
+		comentario.borrar(); //Unlink de citizen comentario y sugerencia
 		Jpa.getManager().remove(comentario);
 		return comentario;
 	}

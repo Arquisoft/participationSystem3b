@@ -12,4 +12,6 @@ public interface AdminService {
 	public void deleteCategoria(Long id) throws BusinessException;
 	
 	public void deleteSugerencia(Long id) throws BusinessException;
+
+	public void anularSugerencia(Long id) throws BusinessException;
 }

@@ -13,7 +13,7 @@ import es.uniovi.asw.model.types.VotosComentariosKey;
 @SuppressWarnings("serial")
 @Entity
 @IdClass(VotosComentariosKey.class)
-@Table(name="TVotoComentario")
+@Table(name="TVOTOCOMENTARIO")
 public class VotoComentario implements Serializable{
 	@Id @ManyToOne private Comentario comentario;
 	@Id @ManyToOne private Citizen citizen;

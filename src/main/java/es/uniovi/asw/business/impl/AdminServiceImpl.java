@@ -2,6 +2,7 @@ package es.uniovi.asw.business.impl;
 
 import es.uniovi.asw.business.AdminService;
 import es.uniovi.asw.business.impl.admin.AddCategoria;
+import es.uniovi.asw.business.impl.admin.AnularSugerencia;
 import es.uniovi.asw.business.impl.admin.DeleteCategoria;
 import es.uniovi.asw.business.impl.admin.DeleteSugerencia;
 import es.uniovi.asw.business.impl.admin.UpdateCategoria;
@@ -32,4 +33,8 @@ public class AdminServiceImpl extends SuperService implements AdminService {
 		cmd.execute(new DeleteSugerencia(id));
 	}
 
+	@Override
+	public void anularSugerencia(Long id) throws BusinessException {
+		cmd.execute(new AnularSugerencia(id));
+	}
 }

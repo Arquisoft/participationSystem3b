@@ -6,6 +6,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +20,7 @@ import javax.persistence.TemporalType;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name="TCategoria")
+@Table(name="TCATEGORIA")
 public class Categoria implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 	@OneToMany(mappedBy="categoria") 
@@ -28,6 +31,9 @@ public class Categoria implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date fechaFin;
 	private int minimoVotos;
+	@ElementCollection
+    @CollectionTable(name = "TPALABRAS")
+    @Column(name="PALABRA")
 	private List<String> palabrasNoPermitidas;
 	
 	public Categoria(String nombre, Date fechaInicio, Date fechaFin, int minimoVotos) {
@@ -101,6 +107,12 @@ public class Categoria implements Serializable{
 	
 	public Set<Sugerencia> getSugerencias() {
 		return new HashSet<>(sugerencias);
+	}
+	
+	public void borrar(){
+		for(Sugerencia s:sugerencias){
+			Association.Sugerir.unlink(s, this);
+		}
 	}
 
 	@Override

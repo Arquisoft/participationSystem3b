@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name="TComentario")
+@Table(name="TCOMENTARIO")
 public class Comentario implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 	@ManyToOne
@@ -69,6 +69,9 @@ public class Comentario implements Serializable{
 		return id;
 	}
 
+	public void borrar() {
+		Association.Comentar.unlink(citizen, this, sugerencia);
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

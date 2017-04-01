@@ -13,7 +13,7 @@ import es.uniovi.asw.model.types.VotosSugerenciasKey;
 @SuppressWarnings("serial")
 @Entity
 @IdClass(VotosSugerenciasKey.class)
-@Table(name="TVotoSugerencia")
+@Table(name="TVOTOSUGERENCIA")
 public class VotoSugerencia implements Serializable{
 
 	@Id @ManyToOne private Sugerencia sugerencia;

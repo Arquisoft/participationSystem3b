@@ -18,7 +18,7 @@ import es.uniovi.asw.model.types.SugerenciaStatus;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name="TSugerencia")
+@Table(name="TSUGERENCIA")
 public class Sugerencia implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 	@ManyToOne
@@ -101,6 +101,10 @@ public class Sugerencia implements Serializable{
 	}
 	public Set<VotoSugerencia> getVotos() {
 		return new HashSet<>(votos);
+	}
+	
+	public void borrar(){
+		Association.Sugerir.unlink(citizen,this, categoria);
 	}
 
 	@Override

@@ -21,6 +21,12 @@ public class Association {
 			sugerencia._setCitizen(null);;
 			
 		}
+		
+		public static void unlink(Sugerencia sugerencia, Categoria categoria){
+			categoria._getSugerencias().remove(sugerencia);
+			
+			sugerencia._setCategoria(null);
+		}
 
 	}
 	

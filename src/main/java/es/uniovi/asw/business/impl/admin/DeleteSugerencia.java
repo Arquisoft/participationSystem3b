@@ -16,6 +16,7 @@ public class DeleteSugerencia implements Command{
 	@Override
 	public Object execute() throws BusinessException {
 		Sugerencia sugerencia = Jpa.getManager().find(Sugerencia.class, idSugerencia);
+		sugerencia.borrar(); //unlink de citizen sugerencia y categoria
 		Jpa.getManager().remove(sugerencia);
 		return sugerencia;
 	}

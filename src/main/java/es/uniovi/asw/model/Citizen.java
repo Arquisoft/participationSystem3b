@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name="TCitizens")
+@Table(name="TCITIZENS")
 public class Citizen implements Serializable{
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;

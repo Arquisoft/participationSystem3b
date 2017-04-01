@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name="TAdministrador")
+@Table(name="TADMINISTRADOR")
 public class Administrador implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 	private String usuario;

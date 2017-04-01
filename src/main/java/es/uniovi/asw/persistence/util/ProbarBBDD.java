@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
  */
 public class ProbarBBDD {
 
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		EntityManagerFactory emf = Persistence
 				.createEntityManagerFactory("citizens");
 		
@@ -18,6 +18,8 @@ public class ProbarBBDD {
 		
 		System.out.println("--> Si no hay excepciones todo va bien");
 		System.out.println("\n\t (O no hay ninguna clase mapeada)");
-	}
+		
+		
+	}*/
 
 }
