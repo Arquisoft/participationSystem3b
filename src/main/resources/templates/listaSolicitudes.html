@@ -23,14 +23,14 @@
 			
 			<tbody>
 				<!--<tr th:each="sol : ${cat.value}">-->
-				<form th:action="@{/ver}" method="POST"> 
+				<form th:action="@{/ver(sugerencia=${sol.id})}" method="POST"> 
 	                  <td th:text="${sol.titulo}"></td> 
 	                  <td><button id="ver" type="submit" name="ver" th:value="${sol.titulo}" class="btn btn-primary" style="background-color: white; border-color: transparent;">
       						<a><i id="eye" class="glyphicon glyphicon-eye-open"></i></a>
       					 </button>
        				  </td> 
                 </form>
-                </tr>
+                <!--</tr>-->
 			</tbody>
 				
 		</tr>

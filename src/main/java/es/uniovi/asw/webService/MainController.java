@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.uniovi.asw.business.Services;
+import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.producers.KafkaProducer;
@@ -36,7 +37,16 @@ public class MainController {
     	if(userValidator.validate(username, password,"citi")){
     		session.setAttribute("user", new User(username,password));
     		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
-    		model.addAttribute("sugerencias", sugerencias); //Ordenar en un diccionario por categoria / ¿una extra para las propias del usuario? 
+    		model.addAttribute("sugerencias", sugerencias);
+    		
+    		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
+    		
+    		for (Categoria categoria: categorias) {
+    			Long idCategoria = categoria.getId();
+    			sugerencias = Services.getSystemServices().findSugerenciasByCategory(idCategoria);
+    			model.addAttribute("sugerencias"+idCategoria, sugerencias);
+    		}
+    		 //Ordenar en un diccionario por categoria / ¿una extra para las propias del usuario? 
     		return "listaSolicitudes";
     	}
     	
@@ -48,16 +58,16 @@ public class MainController {
     	return "login";	
     }
     @RequestMapping(value = "/ver", method = RequestMethod.POST)
-    public String AbrirSolicitud(HttpSession session,Model model,@RequestParam String ver) {
-    		//Ver que sea la ID de la sugerencia
-    		//GetSugerencia(ver)
-    		model.addAttribute("sol", ver);
+    public String AbrirSolicitud(@RequestParam("sugerencia") Long id, HttpSession session,Model model) throws BusinessException {
+    		Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
+    		model.addAttribute("sugerencia", sugerencia);
     		return "solicitud";
     }
     
     @RequestMapping(value = "/crear", method = RequestMethod.POST)
-    public String CrearSolicitud(HttpSession session,Model model,@RequestParam String ver) {
-    	
+    public String CrearSolicitud(HttpSession session,Model model) throws BusinessException {
+    		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
+    		model.addAttribute("categorias", categorias);
     		return "crearSolicitud";
     }
     
@@ -70,7 +80,8 @@ public class MainController {
     
     @RequestMapping(value = "/creacion", method = RequestMethod.POST)
     public String CrearSolicitud(HttpSession session,Model model,@RequestParam String cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
-	    	//Add(categoria,titulo,descripcion,usuario);
+	    	Sugerencia sugerencia = new Sugerencia(null,titulo,description,null);
+    		Services.getCitizenServices().addSugerencia(sugerencia);
     		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 			model.addAttribute("sugerencias", sugerencias);
     		return "listaSolicitudes";

@@ -12,11 +12,13 @@ public class SugerenciaFinder {
 	}
 	
 	public static Sugerencia findById(Long id) {
-		return Jpa.getManager().createNamedQuery("Sugerencia.findById", Sugerencia.class).getSingleResult();
+		return Jpa.getManager().createNamedQuery("Sugerencia.findById", Sugerencia.class).
+			setParameter(1, id).getSingleResult();
 	}
 
 	public static Object findByCategory(Long idCategory) {
-		return Jpa.getManager().createNamedQuery("Sugerencia.findByCategory", Sugerencia.class).getResultList();
+		return Jpa.getManager().createNamedQuery("Sugerencia.findByCategory", Sugerencia.class).
+			setParameter(1, idCategory).getResultList();
 	}
 
 }

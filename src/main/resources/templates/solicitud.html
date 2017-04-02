@@ -19,26 +19,26 @@
 			        <div class="nav-container">
 			    	  <nav id="nav">
 				           <ul>
-				               <li th:text="${sol}"></li>
-				               <!--<li th:text="${sol.name}"></li> -->
+				               <!-- <li th:text="${sol}"></li> -->
+				               <li th:text="${sugerencia.titulo}"></li> 
 				           </ul> 
 			    	  </nav>  
 					</div>
 				</h2>
-				<section>DATOS PROPUESTA...</section>
-				<!--<section th:text="${sol.datos}">DATOS PROPUESTA...</section>-->
+				<!-- <section>DATOS PROPUESTA...</section> -->
+				<section th:text="${sugerencia.contenido}">DATOS PROPUESTA...</section>
 			</div>
 			<div class="row">
 				<p>
 					<form th:action="@{/VotoPositivo}" method="POST">
 				       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 				       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
-				       </button>123 <!--<li th:text="${sol.posVotes}"></li>-->
+				       </button><li th:text="${sugerencia.posVotes}"></li>
 			        </form>
 			       <form th:action="@{/VotoNegativo}" method="POST">
 				       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 				     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
-				       </button>1 <!--<li th:text="${sol.negVotes}"></li> -->
+				       </button><li th:text="${sugerencia.negVotes}"></li> 
 			        </form>
 			    </p>
 			</div>
