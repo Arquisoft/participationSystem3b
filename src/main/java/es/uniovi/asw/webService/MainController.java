@@ -17,6 +17,7 @@ import es.uniovi.asw.business.Services;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Sugerencia;
+import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.producers.KafkaProducer;
 
@@ -91,6 +92,28 @@ public class MainController {
     		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 			model.addAttribute("sugerencias", sugerencias);
     		return "listaSolicitudes";
+    }
+    
+    @RequestMapping(value = "/VotoPositivo", method = RequestMethod.POST)
+    public String VotoPositivo(HttpSession session,Model model, @RequestParam("sugerencia") Long id) throws BusinessException {
+    		votar(session, model, id, true);
+    		return "solicitud";
+    }
+    
+    @RequestMapping(value = "/VotoNegativo", method = RequestMethod.POST)
+    public String VotoNegativo(HttpSession session,Model model, @RequestParam("sugerencia") Long id) throws BusinessException {
+    		votar(session, model, id, false);
+    		return "solicitud";
+    }
+    
+    private void votar(HttpSession session, Model model, Long id, boolean flag) throws BusinessException {
+    	Citizen c = (Citizen) session.getAttribute("user");
+    	Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
+    	VotoSugerencia voto = new VotoSugerencia(sugerencia,c,flag);
+    	Services.getCitizenServices().voteSugerencia(voto);
+    	
+    	SugerenciaVista sVista = new SugerenciaVista(sugerencia);
+    	model.addAttribute("s", sVista);
     }
     
 }
