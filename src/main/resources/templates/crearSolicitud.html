@@ -16,25 +16,37 @@
 		<div class="container">
 			<div class="row">						
 			            <div class="col-md-8">
-			       	       <!-- ESCRIBIR DESCRIPCTION -->
+			            <p>Palabras Prohibidas: 
+			       	       	<tr th:each="cat : ${categorias.prohibiciones}">
+							  <i th:text="${cat}"></i>
+							 </tr>
+							</p>
+			            <form th:action="@{/creacion}" method="POST"> 
+			       	       <p>Categoria: 
+			       	       	<select name="category"> 
+			       	       	<tr th:each="cat : ${categorias}">
+							  <option th:value="${cat}" th:text="${cat.name}"></option>
+							 </tr>
+							</select>
+							</p>
 							<div class="container">
 								<div class="row">
 					               <label for="titulo">Titulo</label>
                     				<input type="text" class="form-control" id="titulo" name="titulo" />
 								</div>
 								<div class="row">
-					                <!-- the comment box -->
 					            	<div class="well">
 					                    <h4><i class="fa fa-paper-plane-o"></i>Descripcion:</h4>
-					                    <form role="form">
+					                    
 					                        <div class="form-group">
 					                            <textarea class="form-control" name="description" rows="3"></textarea>
 					                        </div>
 					                        <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
-					                    </form>
+					                    
 					                </div>
 								</div>
 							</div>
+						</form>
 		    		</div> 
 		     </div> 
 		</div>

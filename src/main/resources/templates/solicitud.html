@@ -20,21 +20,26 @@
 			    	  <nav id="nav">
 				           <ul>
 				               <li th:text="${sol}"></li>
+				               <!--<li th:text="${sol.name}"></li> -->
 				           </ul> 
 			    	  </nav>  
 					</div>
 				</h2>
 				<section>DATOS PROPUESTA...</section>
+				<!--<section th:text="${sol.datos}">DATOS PROPUESTA...</section>-->
 			</div>
 			<div class="row">
 				<p>
-			       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
-			       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
-			       </button>123
-			       
-			       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
-			     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
-			       </button>1
+					<form th:action="@{/VotoPositivo}" method="POST">
+				       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+				       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
+				       </button>123 <!--<li th:text="${sol.posVotes}"></li>-->
+			        </form>
+			       <form th:action="@{/VotoNegativo}" method="POST">
+				       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+				     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
+				       </button>1 <!--<li th:text="${sol.negVotes}"></li> -->
+			        </form>
 			    </p>
 			</div>
 				<!--HACER BOTONES FUNCIONALES-->
@@ -46,27 +51,20 @@
 			       	       <!-- ESCRIBIR COMENTARIOS -->
 							<div class="container">
 								<div class="row">
-							    	<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
-							  		<script>
-							          tinymce.init({
-							              selector: "textarea",
-							              toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-							          });
-							  		</script>
 					                <!-- the comment box -->
 					            	<div class="well">
 					                    <h4><i class="fa fa-paper-plane-o"></i>Deja tu comentario:</h4>
-					                    <form role="form">
+					                    <form th:action="@{/comentario}" method="POST">
 					                        <div class="form-group">
 					                            <textarea class="form-control" rows="3"></textarea>
 					                        </div>
-					                        <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
+					                        <button type="submit" name="say" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
 					                    </form>
 					                </div>
 								</div>
 							</div>
 			           		
-					   
+					   <!--<tr th:each=com "${cat.comentarios}">-->
 						           <!--FOR COMETARIOS -->
 						   	<div class="comments-list">
 						           <div class="media">
@@ -75,10 +73,17 @@
 						                      		USUARIO
 						                      </h4>
 						                      	Comentario
+						                      	
+						                      	<!--<h4 class="media-heading user_name" th:text="${com.usuario}">
+						                      </h4>
+						                      	<p th:text="${com.comentario}"></p>
+						                      	-->
+						                      	
 						                </div>
 						           </div>
 						    </div>
 						    	<!--end-->
+						    	<!--</tr>-->
 		    		</div> 
 		     </div> 
 		</div>

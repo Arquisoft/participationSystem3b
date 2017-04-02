@@ -49,7 +49,8 @@ public class MainController {
     }
     @RequestMapping(value = "/ver", method = RequestMethod.POST)
     public String AbrirSolicitud(HttpSession session,Model model,@RequestParam String ver) {
-    	
+    		//Ver que sea la ID de la sugerencia
+    		//GetSugerencia(ver)
     		model.addAttribute("sol", ver);
     		return "solicitud";
     }
@@ -66,4 +67,13 @@ public class MainController {
 			model.addAttribute("sugerencias", sugerencias);
     		return "listaSolicitudes";
     }
+    
+    @RequestMapping(value = "/creacion", method = RequestMethod.POST)
+    public String CrearSolicitud(HttpSession session,Model model,@RequestParam String cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
+	    	//Add(categoria,titulo,descripcion,usuario);
+    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
+			model.addAttribute("sugerencias", sugerencias);
+    		return "listaSolicitudes";
+    }
+    
 }
