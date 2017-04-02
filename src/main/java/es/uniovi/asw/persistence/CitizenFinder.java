@@ -15,4 +15,9 @@ public class CitizenFinder {
 	public static List<Citizen> findAll() {
 		return Jpa.getManager().createNamedQuery("Citizen.findAll", Citizen.class).getResultList();
 	}
+
+	public static Object findByUserAndPass(String user, String pass) {
+		return Jpa.getManager().createNamedQuery("Citizen.findByUserAndPass", Citizen.class).
+				setParameter(1, user).setParameter(2, pass).getSingleResult();
+	}
 }

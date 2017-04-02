@@ -33,8 +33,6 @@ public class Sugerencia implements Serializable{
 	@ManyToOne
 	private Categoria categoria;
 	
-	private int posVotes;
-	private int negVotes;
 	
 	public Sugerencia(Citizen citizen, String titulo, String contenido, Categoria categoria) {
 		super();
@@ -105,23 +103,13 @@ public class Sugerencia implements Serializable{
 	public Set<VotoSugerencia> getVotos() {
 		return new HashSet<>(votos);
 	}
-	
-	public void setPosVotes(int posVotes) {
-		this.posVotes = posVotes;
-	}
-
-	public void setNegVotes(int negVotes) {
-		this.negVotes = negVotes;
-	}
 
 	public int getPosVotes() {
-		posVotes = votos.stream().filter(v->v.isAFavor()).toArray().length;
-		return posVotes;
+		return votos.stream().filter(v->v.isAFavor()).toArray().length;
 	}
 
 	public int getNegVotes() {
-		negVotes = votos.stream().filter(v->!v.isAFavor()).toArray().length;
-		return negVotes;
+		return votos.stream().filter(v->!v.isAFavor()).toArray().length;
 	}
 
 	public void borrar(){

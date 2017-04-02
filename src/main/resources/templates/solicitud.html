@@ -20,25 +20,25 @@
 			    	  <nav id="nav">
 				           <ul>
 				               <!-- <li th:text="${sol}"></li> -->
-				               <li th:text="${sugerencia.titulo}"></li> 
+				               <li th:text="${s.sugerencia.titulo}"></li> 
 				           </ul> 
 			    	  </nav>  
 					</div>
 				</h2>
 				<!-- <section>DATOS PROPUESTA...</section> -->
-				<section th:text="${sugerencia.contenido}">DATOS PROPUESTA...</section>
+				<section th:text="${s.sugerencia.contenido}">DATOS PROPUESTA...</section>
 			</div>
 			<div class="row">
 				<p>
 					<form th:action="@{/VotoPositivo}" method="POST">
 				       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 				       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
-				       </button><li th:text="${sugerencia.posVotes}"></li>
+				       </button><li th:text="${s.posVotes}"></li>
 			        </form>
 			       <form th:action="@{/VotoNegativo}" method="POST">
 				       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 				     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
-				       </button><li th:text="${sugerencia.negVotes}"></li> 
+				       </button><li th:text="${s.negVotes}"></li> 
 			        </form>
 			    </p>
 			</div>

@@ -5,9 +5,12 @@ import java.util.List;
 import es.uniovi.asw.business.SystemService;
 import es.uniovi.asw.business.impl.system.FindAllCategories;
 import es.uniovi.asw.business.impl.system.FindAllSugerencias;
+import es.uniovi.asw.business.impl.system.FindCategoriaById;
+import es.uniovi.asw.business.impl.system.FindCitizenByUserAndPass;
 import es.uniovi.asw.business.impl.system.FindSugerenciaById;
 import es.uniovi.asw.business.impl.system.FindSugerenciasByCategory;
 import es.uniovi.asw.model.Categoria;
+import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 
@@ -37,5 +40,17 @@ public class SystemServiceImpl extends SuperService implements SystemService {
 	public List<Sugerencia> findSugerenciasByCategory(Long idCategory) throws BusinessException {
 		return (List<Sugerencia>) cmd.execute(new FindSugerenciasByCategory(idCategory));
 	}
+
+	@Override
+	public Citizen findCitizenByUserAndPass(String usuario, String password) throws BusinessException {
+		return (Citizen) cmd.execute(new FindCitizenByUserAndPass(usuario, password));
+	}
+
+	@Override
+	public Categoria findCategoriaById(Long id) throws BusinessException {
+		return (Categoria) cmd.execute(new FindCategoriaById(id));
+	}
+	
+	
 
 }

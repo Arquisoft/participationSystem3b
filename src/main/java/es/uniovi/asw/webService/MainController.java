@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import es.uniovi.asw.business.Services;
 import es.uniovi.asw.model.Categoria;
+import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.producers.KafkaProducer;
@@ -35,7 +36,8 @@ public class MainController {
     public String login(HttpSession session,Model model,@RequestParam String username, @RequestParam String password) throws BusinessException {
     	
     	if(userValidator.validate(username, password,"citi")){
-    		session.setAttribute("user", new User(username,password));
+    		Citizen c = Services.getSystemServices().findCitizenByUserAndPass("Seila_seila", "llFh9oTmjUI=");
+    		session.setAttribute("user", c);
     		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
     		model.addAttribute("sugerencias", sugerencias);
     		
@@ -60,7 +62,8 @@ public class MainController {
     @RequestMapping(value = "/ver", method = RequestMethod.POST)
     public String AbrirSolicitud(@RequestParam("sugerencia") Long id, HttpSession session,Model model) throws BusinessException {
     		Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
-    		model.addAttribute("sugerencia", sugerencia);
+    		SugerenciaVista sugerenciaVista = new SugerenciaVista(sugerencia);
+    		model.addAttribute("s", sugerenciaVista);
     		return "solicitud";
     }
     
@@ -79,8 +82,11 @@ public class MainController {
     }
     
     @RequestMapping(value = "/creacion", method = RequestMethod.POST)
-    public String CrearSolicitud(HttpSession session,Model model,@RequestParam String cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
-	    	Sugerencia sugerencia = new Sugerencia(null,titulo,description,null);
+    public String CrearSolicitud(HttpSession session,Model model,@RequestParam Long cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
+	    	Citizen c = (Citizen) session.getAttribute("user");
+	    	Categoria categoria = Services.getSystemServices().findCategoriaById(cat);
+	    	
+    		Sugerencia sugerencia = new Sugerencia(c,titulo,description,categoria);
     		Services.getCitizenServices().addSugerencia(sugerencia);
     		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 			model.addAttribute("sugerencias", sugerencias);

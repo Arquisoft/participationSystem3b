@@ -23,9 +23,9 @@
 						</p>
 			            <form th:action="@{/creacion}" method="POST"> 
 			       	       <p>Categoria: 
-			       	       	<select name="category"> 
+			       	       	<select name="cat"> 
 			       	       	<tr th:each="cat : ${categorias}">
-							  <option th:value="${cat}" th:text="${cat.nombre}"></option>
+							  <option name="cat" th:value="${cat.id}" th:text="${cat.nombre}"></option>
 							 </tr>
 							</select>
 							</p>

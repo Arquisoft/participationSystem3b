@@ -10,5 +10,6 @@ public class CategoriaFinder {
 	public static List<Categoria> findAll() {
 		return Jpa.getManager().createNamedQuery("Categoria.findAll", Categoria.class).getResultList();
 	}
+
 	
 }
