@@ -84,6 +84,10 @@ public class Sugerencia implements Serializable{
 	public void setEstado(SugerenciaStatus estado) {
 		this.estado = estado;
 	}
+	
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 
 	public Categoria getCategoria() {
 		return categoria;

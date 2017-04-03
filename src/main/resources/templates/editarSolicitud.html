@@ -1,0 +1,55 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Crear Solicitud</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	          crossorigin="anonymous" />
+	</head>
+	<body>
+		<form th:action="@{/listaSolicitudes}" method="POST"> 
+			<button id="atrasBoton" type="submit" class="btn btn-primary">
+				Atras
+			</button>
+		</form> 
+		
+		<div class="container">
+			<div class="row">						
+			            <div class="col-md-8">
+			            <p>Palabras Prohibidas: 
+			       	       	<!-- <tr th:each="cat : ${categorias.palabrasNoPermitidas}">
+							  <i th:text="${cat}"></i>
+							</tr> -->
+						</p>
+			            <form th:action="@{/editar(sugerencia=${s.id})}" method="POST"> 
+			       	       <p>Categoria: 
+			       	       	<select name="cat"> 
+			       	       	<tr th:each="cat : ${categorias}">
+							  <option name="cat" th:value="${cat.id}" th:text="${cat.nombre}"></option>
+							</tr>
+							</select>
+							</p>
+							<div class="container">
+								<div class="row">
+					               <label for="titulo">Titulo</label>
+                    				<input th:value="${s.titulo}" type="text" class="form-control" id="titulo" name="titulo"/>
+								</div>
+								<div class="row">
+					            	<div class="well">
+					                    <h4><i class="fa fa-paper-plane-o"></i>Descripcion:</h4>
+					                    
+					                        <div class="form-group">
+					                            <textarea th:text="${s.contenido}" class="form-control" name="description" rows="3"></textarea>
+					                        </div>
+					                        <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
+					                    
+					                </div>
+								</div>
+							</div>
+						</form>
+		    		</div> 
+		     </div> 
+		</div>
+		                
+	</body>
+</html>

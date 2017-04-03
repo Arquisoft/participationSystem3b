@@ -50,6 +50,33 @@ public class UserController {
 	    		return "crearSolicitud";
 	    }
 	    
+	    @RequestMapping(value = "/verEditar", method = RequestMethod.POST)
+	    public String EditarSolicitud(HttpSession session,Model model,@RequestParam("sugerencia") Long id) throws BusinessException {
+	    		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
+	    		model.addAttribute("categorias", categorias);
+	    		Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
+	    		model.addAttribute("s", sugerencia);
+	    		return "editarSolicitud";
+	    }
+	    
+	    @RequestMapping(value= "/editar", method = RequestMethod.POST)
+		public String Editar(HttpSession session,Model model,@RequestParam("sugerencia") Long id, @RequestParam Long cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
+	    	Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
+	    	Categoria categoria = Services.getSystemServices().findCategoriaById(cat);
+	    	
+	    	sugerencia.setTitulo(titulo);
+	    	sugerencia.setContenido(description);
+	    	sugerencia.setCategoria(categoria);
+	    	Services.getCitizenServices().updateSugerencia(sugerencia);
+	    	
+	    	List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
+			model.addAttribute("sugerencias", sugerencias);
+			
+			Citizen citizen = (Citizen) session.getAttribute("user");
+			Actions.listarCategorias(model, citizen);
+			return "listaSolicitudes";
+		}
+	    
 	    @RequestMapping(value = "/creacion", method = RequestMethod.POST)
 	    public String CrearSolicitud(HttpSession session,Model model,@RequestParam Long cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
 		    	Citizen c = (Citizen) session.getAttribute("user");
