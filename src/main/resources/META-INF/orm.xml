@@ -30,6 +30,11 @@
 		<query>select c from Citizen c 
 			   where c.usuario = ?1 and c.password = ?2 </query>
 	</named-query>
+	
+	<named-query name="Admin.findByUserAndPass">
+		<query>select a from Administrador a 
+			   where a.usuario = ?1 and a.password = ?2 </query>
+	</named-query>
 
 <!-- 
 	<named-query name="findItemsOnSaleByCategoryId">

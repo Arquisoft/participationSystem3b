@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.uniovi.asw.business.Services;
+import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Comentario;
@@ -55,8 +56,9 @@ public class MainController {
     	}
     	
     	else if(userValidator.validate(username, password,"admin")){
-    		session.setAttribute("user", new User(username,password));
-    		return "admin";
+    		Administrador admin = Services.getSystemServices().findAdminByUserAndPass("admin", "admin");
+    		session.setAttribute("admin", admin);
+    		return "listaSolicitudesadmin";
     	}
 
     	return "login";	

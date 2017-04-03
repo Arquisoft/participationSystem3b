@@ -2,6 +2,7 @@ package es.uniovi.asw.business;
 
 import java.util.List;
 
+import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Sugerencia;
@@ -20,5 +21,7 @@ public interface SystemService {
 	public List<Sugerencia> findSugerenciasByCategory(Long idCategory) throws BusinessException;
 	
 	public Citizen findCitizenByUserAndPass(String usuario, String password) throws BusinessException;
+
+	public Administrador findAdminByUserAndPass(String usuario, String password) throws BusinessException;
 
 }
