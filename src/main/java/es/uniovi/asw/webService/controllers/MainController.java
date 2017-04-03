@@ -48,7 +48,7 @@ public class MainController {
     		session.setAttribute("user", c);
     		
     		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
-    		
+    		model.addAttribute("categorias", categorias);
     		for (Categoria categoria: categorias) {
     			Long idCategoria = categoria.getId();
     			sugerencias = Services.getSystemServices().findSugerenciasByCategory(idCategoria);

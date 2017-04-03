@@ -4,6 +4,7 @@ import es.uniovi.asw.business.impl.Command;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.persistence.util.Jpa;
+import es.uniovi.asw.util.ComprobarPalabras;
 
 public class UpdateSugerencia implements Command {
 	
@@ -15,6 +16,7 @@ public class UpdateSugerencia implements Command {
 
 	@Override
 	public Object execute() throws BusinessException {
+		ComprobarPalabras.comprobarPalabras(sugerencia);
 		Jpa.getManager().merge(sugerencia);
 		return sugerencia;
 	}
