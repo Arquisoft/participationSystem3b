@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous" />
+     <title>Lista de solicitudes</title>
+</head>
+<body>
+	<form th:action="@{/listaSolicitudesadmin}" method="POST"> 
+		<button id="atrasBoton" type="submit" class="btn btn-primary">
+				Atras
+			</button>
+	 </form>
+	<div class="container">
+		
+            <h1>Crear una categoría</h1>
+            <form th:action="@{/modificarCategoria}" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Añadir un nombre para la categoria" />
+                </div>
+                <div class="form-group">
+                    <label for="fechamin">Fecha minima</label>
+                    <input type="text" class="form-control" id="fechamin" name="fechamin" placeholder="dd/mm/yyy" />
+                </div>
+                <div class="form-group">
+                    <label for="fechamax">Fecha maxima</label>
+                    <input type="text" class="form-control" id="fechamax" name="fechamax" placeholder="dd/mm/yyy" />
+                </div>
+                <div class="form-group">
+                    <label for="numVotos">Numero de votos necesarios</label>
+                    <input type="text" class="form-control" id="numVotos" name="numVotos" placeholder="numero minimo de votos necesarios" />
+                </div>
+                <div class="form-group">
+                    <label for="denegadas">Palabras denegadas</label>
+                    <input type="text" class="form-control" id="denegadas" name="denegadas" placeholder="palabras separadas por ';'" />
+                </div>
+                
+                <button id="crear" type="submit" class="btn btn-primary">Crear</button>
+            </form>
+	</div>
+</body>
+</html>

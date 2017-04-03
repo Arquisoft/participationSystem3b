@@ -42,6 +42,8 @@ public class MainController {
     	
     	List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 		model.addAttribute("sugerencias", sugerencias);
+		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
+		model.addAttribute("categorias", categorias);
 		
     	if(userValidator.validate(username, password,"citi")){
     		Citizen c = Services.getSystemServices().findCitizenByUserAndPass("Seila_seila", "llFh9oTmjUI=");
