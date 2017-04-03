@@ -7,6 +7,8 @@ import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.model.types.SugerenciaStatus;
 import es.uniovi.asw.persistence.util.Jpa;
+import es.uniovi.asw.producers.KafkaProducer;
+import es.uniovi.asw.producers.Topics;
 import es.uniovi.asw.webService.Message;
 
 public class AddSugerencia implements Command{
@@ -24,19 +26,26 @@ public class AddSugerencia implements Command{
 		
 		List<String> palabras = sugerencia.getCategoria().getPalabrasNoPermitidas();
 		boolean nopermitida = false;
+		String titulof = titulo;
+		String contenidof = contenido;
 		for(int i=0; i<palabras.size();i++){ //Para las palabras no permitidas se comprueba si están en el título o el contenido
-			if(titulo.matches(".*\\b"+palabras.get(i)+"\\b.*") || contenido.matches(".*\\b"+palabras.get(i)+"\\b.*")){
+			if(titulof.matches(".*\\b"+palabras.get(i)+"\\b.*") || contenidof.matches(".*\\b"+palabras.get(i)+"\\b.*")){
 				nopermitida = true; //Si está se pasa a true
-				break; //Y se sale del bucle
+				titulof = titulof.replaceAll("\\b"+palabras.get(i)+"\\b", "****"); //Se sustituyen las apariciones de la palabra por asteriscos
+				contenidof = contenidof.replaceAll("\\b"+palabras.get(i)+"\\b", "****"); //Lo mismo
 			}
 		}
 		
-		if(nopermitida) //Pasar a anulada si tiene palabras no permitidas
+		if(nopermitida){ //Pasar a anulada si tiene palabras no permitidas y cambiar el titulo y el contenido por los que tienen los asteriscos
 			sugerencia.setEstado(SugerenciaStatus.Anulada);
+			sugerencia.setTitulo(titulof);
+			sugerencia.setContenido(contenidof);
+		}
 		
 		Jpa.getManager().persist(sugerencia); //Meter en bd
 		
-		Message.setMessage(sugerencia); //Enviar kafka
+		new KafkaProducer().send(Topics.CREATE_SUGGESTION, Message.setMessage(sugerencia)); //Enviar kafka
+		 
 		
 		return sugerencia;
 	}
