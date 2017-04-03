@@ -111,6 +111,10 @@ public class Sugerencia implements Serializable{
 	public int getNegVotes() {
 		return votos.stream().filter(v->!v.isAFavor()).toArray().length;
 	}
+	
+	public int getVotosTotal() {
+		return getPosVotes() - getNegVotes();
+	}
 
 	public void borrar(){
 		Association.Sugerir.unlink(citizen,this, categoria);

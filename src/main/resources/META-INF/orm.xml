@@ -26,6 +26,10 @@
 		<query>select s from Sugerencia s where s.categoria.id = ?1</query>
 	</named-query>
 	
+	<named-query name="Sugerencia.findByUser">
+		<query>select s from Sugerencia s where s.citizen.id = ?1</query>
+	</named-query>
+	
 	<named-query name="Citizen.findByUserAndPass">
 		<query>select c from Citizen c 
 			   where c.usuario = ?1 and c.password = ?2 </query>

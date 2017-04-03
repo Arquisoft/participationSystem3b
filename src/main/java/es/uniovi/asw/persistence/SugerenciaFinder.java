@@ -16,4 +16,9 @@ public class SugerenciaFinder {
 			setParameter(1, idCategory).getResultList();
 	}
 
+	public static List<Sugerencia> findByUserId(Long idUser) {
+		return Jpa.getManager().createNamedQuery("Sugerencia.findByUser", Sugerencia.class).
+				setParameter(1, idUser).getResultList();
+	}
+
 }

@@ -1,7 +1,7 @@
 package es.uniovi.asw.webService;
 
 public class userValidator {
-	static boolean validate(String name,String passwd,String type){
+	public static boolean validate(String name,String passwd,String type){
 		if (name.equals("admin"))
 			if (type.equals("admin"))
 				return true;
