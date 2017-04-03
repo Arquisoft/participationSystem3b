@@ -24,4 +24,6 @@ public interface SystemService {
 
 	public Administrador findAdminByUserAndPass(String usuario, String password) throws BusinessException;
 
+	public List<Sugerencia> findSugerenciasByUserId(Long id) throws BusinessException;
+
 }

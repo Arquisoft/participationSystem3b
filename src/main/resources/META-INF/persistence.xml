@@ -14,7 +14,7 @@
             <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
             <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/data.sql"/> 
 			<property name="eclipselink.logging.file" value="eclipselink.log" />
-			<property name="eclipselink.logging.level" value="FINE" />
+			<property name="eclipselink.logging.level" value="OFF" />
 
 			<!-- HSQLDB -->
 <!--  			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" /> -->

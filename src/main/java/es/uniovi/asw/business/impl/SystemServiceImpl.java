@@ -10,6 +10,7 @@ import es.uniovi.asw.business.impl.system.FindCategoriaById;
 import es.uniovi.asw.business.impl.system.FindCitizenByUserAndPass;
 import es.uniovi.asw.business.impl.system.FindSugerenciaById;
 import es.uniovi.asw.business.impl.system.FindSugerenciasByCategory;
+import es.uniovi.asw.business.impl.system.FindSugerenciasByUserId;
 import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Citizen;
@@ -56,6 +57,12 @@ public class SystemServiceImpl extends SuperService implements SystemService {
 	@Override
 	public Administrador findAdminByUserAndPass(String usuario, String password) throws BusinessException {
 		return (Administrador) cmd.execute(new FindAdminByUserAndPass(usuario, password));
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Sugerencia> findSugerenciasByUserId(Long id) throws BusinessException {
+		return (List<Sugerencia>) cmd.execute(new FindSugerenciasByUserId(id));
 	}
 	
 	
