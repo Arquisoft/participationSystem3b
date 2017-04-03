@@ -80,7 +80,12 @@ public class UserController {
 	    	Citizen c = (Citizen) session.getAttribute("user");
 	    	Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
 	    	VotoSugerencia voto = new VotoSugerencia(sugerencia,c,flag);
-	    	Services.getCitizenServices().voteSugerencia(voto);
+	    	
+	    	try {
+	    		Services.getCitizenServices().voteSugerencia(voto);
+	    	} catch (Exception e) {
+	    		
+	    	}
 	    	
 	    	SugerenciaVista sVista = new SugerenciaVista(sugerencia);
 	    	model.addAttribute("s", sVista);

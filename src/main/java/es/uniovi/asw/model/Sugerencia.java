@@ -3,6 +3,7 @@ package es.uniovi.asw.model;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collector;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -17,6 +18,7 @@ import javax.persistence.Table;
 import com.google.gson.annotations.Expose;
 
 import es.uniovi.asw.model.types.SugerenciaStatus;
+import scala.collection.parallel.ParIterableLike.Collect;
 
 @SuppressWarnings("serial")
 @Entity
