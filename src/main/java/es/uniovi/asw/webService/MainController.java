@@ -65,6 +65,7 @@ public class MainController {
     		Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
     		SugerenciaVista sugerenciaVista = new SugerenciaVista(sugerencia);
     		model.addAttribute("s", sugerenciaVista);
+    		System.out.println(sugerenciaVista.getPosVotes());
     		return "solicitud";
     }
     

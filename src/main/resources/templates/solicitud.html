@@ -64,26 +64,21 @@
 								</div>
 							</div>
 			           		
-					   <!--<tr th:each=com "${cat.comentarios}">-->
+					   <tr th:each="com:${s.sugerencia.comentarios}">
 						           <!--FOR COMETARIOS -->
 						   	<div class="comments-list">
 						           <div class="media">
 						                <div class="media-body">
-						                      <h4 class="media-heading user_name">
-						                      		USUARIO
+						                      <h4 class="media-heading user_name" th:text="${com.citizen.usuario}">
 						                      </h4>
-						                      	Comentario
-						                      	
-						                      	<!--<h4 class="media-heading user_name" th:text="${com.usuario}">
-						                      </h4>
-						                      	<p th:text="${com.comentario}"></p>
-						                      	-->
+						                      	<p th:text="${com.contenido}"></p>
+						                      
 						                      	
 						                </div>
 						           </div>
 						    </div>
 						    	<!--end-->
-						    	<!--</tr>-->
+						    	</tr>
 		    		</div> 
 		     </div> 
 		</div>
