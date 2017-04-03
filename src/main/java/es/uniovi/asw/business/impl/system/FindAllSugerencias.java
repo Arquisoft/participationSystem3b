@@ -7,7 +7,7 @@ import es.uniovi.asw.business.impl.Command;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.persistence.SugerenciaFinder;
-import es.uniovi.asw.webService.ComparadorSugerencias;
+import es.uniovi.asw.util.comparador.ComparadorSugerencias;
 
 public class FindAllSugerencias implements Command {
 	

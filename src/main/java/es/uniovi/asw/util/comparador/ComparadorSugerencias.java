@@ -1,4 +1,4 @@
-package es.uniovi.asw.webService;
+package es.uniovi.asw.util.comparador;
 
 import java.util.Comparator;
 

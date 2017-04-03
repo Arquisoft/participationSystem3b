@@ -70,6 +70,18 @@ public class Comentario implements Serializable{
 	public long getId() {
 		return id;
 	}
+	
+	public int getPosVotes() {
+		return votos.stream().filter(v->v.isAFavor()).toArray().length;
+	}
+
+	public int getNegVotes() {
+		return votos.stream().filter(v->!v.isAFavor()).toArray().length;
+	}
+	
+	public int getVotosTotal() {
+		return getPosVotes() - getNegVotes();
+	}
 
 	public void borrar() {
 		Association.Comentar.unlink(citizen, this, sugerencia);

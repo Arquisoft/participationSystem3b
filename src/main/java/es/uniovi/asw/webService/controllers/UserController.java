@@ -85,6 +85,7 @@ public class UserController {
 	    	Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
 	    	VotoSugerencia voto = new VotoSugerencia(sugerencia,c,flag);
 	    	
+
 	    	try{
 		    	Services.getCitizenServices().voteSugerencia(voto);
 		    	kafkaProducer.send(Topics.VOTE_SUGGESTION, Message.setMessage(voto));
@@ -97,7 +98,7 @@ public class UserController {
 				Jpa.getManager().merge(voto.getSugerencia());
 				new KafkaProducer().send(Topics.ACCEPT_SUGGESTION, Message.setMessage(voto.getSugerencia())); //Enviar kafka
 			}
-	    	
+
 	    	SugerenciaVista sVista = new SugerenciaVista(sugerencia);
 	    	model.addAttribute("s", sVista);
 	    }
