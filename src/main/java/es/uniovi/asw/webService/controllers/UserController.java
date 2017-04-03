@@ -19,7 +19,11 @@ import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
+import es.uniovi.asw.model.types.SugerenciaStatus;
+import es.uniovi.asw.persistence.util.Jpa;
 import es.uniovi.asw.producers.KafkaProducer;
+import es.uniovi.asw.producers.Topics;
+import es.uniovi.asw.webService.Message;
 import es.uniovi.asw.webService.SugerenciaVista;
 
 @Controller
@@ -58,7 +62,7 @@ public class UserController {
 		    	Categoria categoria = Services.getSystemServices().findCategoriaById(cat);
 		    	
 	    		Sugerencia sugerencia = new Sugerencia(c,titulo,description,categoria);
-	    		Services.getCitizenServices().addSugerencia(sugerencia);
+	    		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(sugerencia));
 	    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 				model.addAttribute("sugerencias", sugerencias);
 	    		return "listaSolicitudes";
@@ -80,7 +84,19 @@ public class UserController {
 	    	Citizen c = (Citizen) session.getAttribute("user");
 	    	Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
 	    	VotoSugerencia voto = new VotoSugerencia(sugerencia,c,flag);
-	    	Services.getCitizenServices().voteSugerencia(voto);
+	    	
+	    	try{
+		    	Services.getCitizenServices().voteSugerencia(voto);
+		    	kafkaProducer.send(Topics.VOTE_SUGGESTION, Message.setMessage(voto));
+	    	}catch (Exception e) {
+	    		
+	    	}
+	    	
+	    	if(voto.getSugerencia().getVotosTotal()>=voto.getSugerencia().getCategoria().getMinimoVotos()){
+				voto.getSugerencia().setEstado(SugerenciaStatus.Aceptada); //Pasar a aceptada
+				Jpa.getManager().merge(voto.getSugerencia());
+				new KafkaProducer().send(Topics.ACCEPT_SUGGESTION, Message.setMessage(voto.getSugerencia())); //Enviar kafka
+			}
 	    	
 	    	SugerenciaVista sVista = new SugerenciaVista(sugerencia);
 	    	model.addAttribute("s", sVista);
@@ -93,6 +109,7 @@ public class UserController {
 	    		Comentario comentario = new Comentario(c, sugerencia, mensaje);
 	    		
 	    		Services.getCitizenServices().addComentario(comentario);
+	    		kafkaProducer.send(Topics.COMMENT_SUGGESTION, Message.setMessage(comentario));
 	    		SugerenciaVista sVista = new SugerenciaVista(sugerencia);
 	        	model.addAttribute("s", sVista);
 	    		return "solicitud";
