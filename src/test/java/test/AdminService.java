@@ -53,7 +53,7 @@ public class AdminService {
 		assertTrue(sugerencia.getEstado().equals(SugerenciaStatus.Anulada));
 	}
 	
-	//@Test
+	@Test
 	public void deleteSugerencia() throws BusinessException {
 		Citizen citizen = Services.getSystemServices().findCitizenByUserAndPass("Seila_seila", "llFh9oTmjUI=");
 		Categoria categoria = new Categoria("categoriaPrueba", new Date(), new Date(), 100);
