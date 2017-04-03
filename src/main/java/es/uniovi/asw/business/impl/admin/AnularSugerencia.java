@@ -18,6 +18,7 @@ public class AnularSugerencia implements Command{
 	public Object execute() throws BusinessException {
 		Sugerencia sugerencia = Jpa.getManager().find(Sugerencia.class, idSugerencia);
 		sugerencia.setEstado(SugerenciaStatus.Anulada);
+		Jpa.getManager().merge(sugerencia);
 		return sugerencia;
 	}
 	
