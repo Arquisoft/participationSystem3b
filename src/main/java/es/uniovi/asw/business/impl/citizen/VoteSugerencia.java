@@ -1,7 +1,5 @@
 package es.uniovi.asw.business.impl.citizen;
 
-import java.util.Set;
-
 import es.uniovi.asw.business.impl.Command;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
@@ -21,17 +19,9 @@ public class VoteSugerencia implements Command{
 	public Object execute() throws BusinessException {
 		Jpa.getManager().persist(voto);
 		Jpa.getManager().merge(voto.getSugerencia());
-		Set<VotoSugerencia> votos = voto.getSugerencia().getVotos();
-		int n = 0;
-		for(VotoSugerencia v:votos){
-			if (v.isAFavor())
-				n++;
-			else
-				n--;
-		}
 		
-		if(n>=voto.getSugerencia().getCategoria().getMinimoVotos()){
-			voto.getSugerencia().setEstado(SugerenciaStatus.Aceptada);
+		if(voto.getSugerencia().getVotosTotal()>=voto.getSugerencia().getCategoria().getMinimoVotos()){
+			voto.getSugerencia().setEstado(SugerenciaStatus.Aceptada); //Pasar a aceptada
 			Message.setMessage(voto); //Enviar kafka
 		}
 			
