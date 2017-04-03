@@ -17,6 +17,7 @@ import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
+import es.uniovi.asw.model.VotoComentario;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.model.types.SugerenciaStatus;
@@ -49,22 +50,19 @@ public class UserController {
 	    		return "crearSolicitud";
 	    }
 	    
-	    @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
-	    public String ListaSol(HttpSession session,Model model) throws BusinessException {
-		    	List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
-				model.addAttribute("sugerencias", sugerencias);
-	    		return "listaSolicitudes";
-	    }
-	    
 	    @RequestMapping(value = "/creacion", method = RequestMethod.POST)
 	    public String CrearSolicitud(HttpSession session,Model model,@RequestParam Long cat,@RequestParam String titulo,@RequestParam String description) throws BusinessException {
 		    	Citizen c = (Citizen) session.getAttribute("user");
 		    	Categoria categoria = Services.getSystemServices().findCategoriaById(cat);
 		    	
 	    		Sugerencia sugerencia = new Sugerencia(c,titulo,description,categoria);
+	    		Services.getCitizenServices().addSugerencia(sugerencia);
 	    		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(sugerencia));
+	    		
 	    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 				model.addAttribute("sugerencias", sugerencias);
+				Actions.listarCategorias(model, c);
+				
 	    		return "listaSolicitudes";
 	    }
 	    
@@ -89,15 +87,16 @@ public class UserController {
 	    	try{
 		    	Services.getCitizenServices().voteSugerencia(voto);
 		    	kafkaProducer.send(Topics.VOTE_SUGGESTION, Message.setMessage(voto));
+		    	
+		    	if(voto.getSugerencia().getVotosTotal()>=voto.getSugerencia().getCategoria().getMinimoVotos()){
+					voto.getSugerencia().setEstado(SugerenciaStatus.Aceptada); //Pasar a aceptada
+					Services.getCitizenServices().updateSugerencia(sugerencia);
+					//Jpa.getManager().merge(voto.getSugerencia());
+					new KafkaProducer().send(Topics.ACCEPT_SUGGESTION, Message.setMessage(voto.getSugerencia())); //Enviar kafka
+				}
 	    	}catch (Exception e) {
 	    		
 	    	}
-	    	
-	    	if(voto.getSugerencia().getVotosTotal()>=voto.getSugerencia().getCategoria().getMinimoVotos()){
-				voto.getSugerencia().setEstado(SugerenciaStatus.Aceptada); //Pasar a aceptada
-				Jpa.getManager().merge(voto.getSugerencia());
-				new KafkaProducer().send(Topics.ACCEPT_SUGGESTION, Message.setMessage(voto.getSugerencia())); //Enviar kafka
-			}
 
 	    	SugerenciaVista sVista = new SugerenciaVista(sugerencia);
 	    	model.addAttribute("s", sVista);
@@ -114,6 +113,33 @@ public class UserController {
 	    		SugerenciaVista sVista = new SugerenciaVista(sugerencia);
 	        	model.addAttribute("s", sVista);
 	    		return "solicitud";
+	    }
+	    
+	    @RequestMapping(value = "/VotoPositivoCom", method = RequestMethod.POST)
+	    public String VotoPositivoComentario(HttpSession session,Model model, @RequestParam("comentario") Long id) throws BusinessException {
+	    	votarComentario(session,model,id,true);
+	    	return "solicitud";
+	    }
+	    
+	    @RequestMapping(value = "/VotoNegativoCom", method = RequestMethod.POST)
+	    public String VotoNegativoComentario(HttpSession session,Model model, @RequestParam("comentario") Long id) throws BusinessException {
+	    	votarComentario(session,model,id,false);
+	    	return "solicitud";
+	    }
+	    
+	    private void votarComentario(HttpSession session, Model model, Long id, boolean flag) throws BusinessException {
+	    	Citizen c = (Citizen) session.getAttribute("user");
+	    	Comentario comentario = Services.getCitizenServices().findComentarioById(id);
+	    	VotoComentario voto = new VotoComentario(comentario,c,flag);
+	    	
+	    	try {
+	    		Services.getCitizenServices().voteComentario(voto);
+	    	} catch (Exception e) {
+	    		
+	    	}
+	    	
+	    	SugerenciaVista sVista = new SugerenciaVista(comentario.getSugerencia());
+	    	model.addAttribute("s", sVista);
 	    }
 
 }

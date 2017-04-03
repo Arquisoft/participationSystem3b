@@ -22,4 +22,6 @@ public interface CitizenService {
 	
 	public void voteComentario(VotoComentario voto) throws BusinessException;
 
+	public Comentario findComentarioById(Long id) throws BusinessException;
+
 }

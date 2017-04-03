@@ -1,10 +1,17 @@
 package es.uniovi.asw.webService;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
+import es.uniovi.asw.util.comparador.Comparator;
 
 public class SugerenciaVista {
 	
 	private Sugerencia sugerencia;
+	private List<ComentarioVista> comentarios = new ArrayList<>();
 	private int posVotes;
 	private int negVotes;
 	
@@ -36,6 +43,17 @@ public class SugerenciaVista {
 
 	public void setNegVotes(int negVotes) {
 		this.negVotes = negVotes;
+	}
+
+	public List<ComentarioVista> getComentarios() {
+		for (Comentario c: sugerencia.getComentarios())
+			comentarios.add(new ComentarioVista(c));
+		return comentarios.stream().
+				sorted(Comparator.getComentarios()).collect(Collectors.toList());
+	}
+
+	public void setComentarios(List<ComentarioVista> comentarios) {
+		this.comentarios = comentarios;
 	}
 
 }

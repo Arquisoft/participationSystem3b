@@ -5,6 +5,7 @@ import es.uniovi.asw.business.impl.citizen.AddComentario;
 import es.uniovi.asw.business.impl.citizen.AddSugerencia;
 import es.uniovi.asw.business.impl.citizen.DeleteComentario;
 import es.uniovi.asw.business.impl.citizen.DeleteSugerencia;
+import es.uniovi.asw.business.impl.citizen.FindComentarioById;
 import es.uniovi.asw.business.impl.citizen.UpdateSugerencia;
 import es.uniovi.asw.business.impl.citizen.VoteComentario;
 import es.uniovi.asw.business.impl.citizen.VoteSugerencia;
@@ -52,6 +53,11 @@ public class CitizenServiceImpl extends SuperService implements CitizenService {
 	@Override
 	public void voteComentario(VotoComentario voto) throws BusinessException {
 		cmd.execute(new VoteComentario(voto));
+	}
+
+	@Override
+	public Comentario findComentarioById(Long id) throws BusinessException {
+		return (Comentario) cmd.execute(new FindComentarioById(id));
 	}
 
 }

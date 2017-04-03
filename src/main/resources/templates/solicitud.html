@@ -64,15 +64,26 @@
 								</div>
 							</div>
 			           		
-					   <tr th:each="com:${s.sugerencia.comentarios}">
+					   <tr th:each="com:${s.comentarios}">
 						           <!--FOR COMETARIOS -->
 						   	<div class="comments-list">
 						           <div class="media">
 						                <div class="media-body">
-						                      <h4 class="media-heading user_name" th:text="${com.citizen.usuario}">
+						                      <h4 class="media-heading user_name" th:text="${com.comentario.citizen.usuario}">
 						                      </h4>
-						                      	<p th:text="${com.contenido}"></p>
-						                      
+						                      <p th:text="${com.comentario.contenido}"></p>
+						                      <p>
+												<form th:action="@{/VotoPositivoCom(comentario=${com.comentario.id})}" method="POST">
+											       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+											       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
+											       </button><li th:text="${com.posVotes}"></li>
+										        </form>
+										       <form th:action="@{/VotoNegativoCom(comentario=${com.comentario.id})}" method="POST">
+											       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+											     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
+											       </button><li th:text="${com.negVotes}"></li> 
+										        </form>
+			    							  </p>
 						                      	
 						                </div>
 						           </div>

@@ -98,8 +98,7 @@ public class Sugerencia implements Serializable{
 	}
 
 	public Set<Comentario> getComentarios() {
-		return new HashSet<>(comentarios).stream().
-				sorted(Comparator.getComentarios()).collect(Collectors.toSet());
+		return new HashSet<>(comentarios);
 	}
 
 	Set<Comentario> _getComentarios() {

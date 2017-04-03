@@ -16,7 +16,8 @@ public class VoteComentario implements Command {
 	@Override
 	public Object execute() throws BusinessException {
 		Jpa.getManager().persist(voto);
-		
+		Jpa.getManager().merge(voto.getComentario());
+		Jpa.getManager().merge(voto.getComentario().getSugerencia());
 		return voto;
 	}
 

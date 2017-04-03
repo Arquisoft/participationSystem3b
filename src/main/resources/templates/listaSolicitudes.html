@@ -33,6 +33,10 @@
 			      						<a><i id="eye" class="glyphicon glyphicon-eye-open"></i></a>
 			      					 </button>
 			       				  </td> 
+			       				  <td>Votos a favor: </td>
+			       				  <td th:text="${sol.posVotes}"></td>
+			       				  <td>- Votos en contra: </td>
+			       				  <td th:text="${sol.negVotes}"></td>
 			                </form>		
 					</tr>
 				</div>
@@ -45,6 +49,10 @@
 		      						<a><i id="eye" class="glyphicon glyphicon-eye-open"></i></a>
 		      					 </button>
 		       				  </td> 
+		       				   <td>Votos a favor: </td>
+			       			   <td th:text="${sol.posVotes}"></td>
+			       			   <td>- Votos en contra: </td>
+			       			   <td th:text="${sol.negVotes}"></td>
 		                </form>		
 				</tr>
 			</div>
@@ -61,7 +69,11 @@
 				                		 <button id="cog" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 				      						<a><i id="cog" class="glyphicon glyphicon-cog"></i></a>
 				      					 </button>
-				       			</form>		
+				       			</form>	
+				       			 <td>Votos a favor: </td>
+			       				 <td th:text="${sol.posVotes}"></td>
+			       				 <td>- Votos en contra: </td>
+			       				 <td th:text="${sol.negVotes}"></td>
 			       			</div>
 			                
 				</tr>

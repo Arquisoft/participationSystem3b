@@ -2,13 +2,13 @@ package es.uniovi.asw.util.comparador;
 
 import java.util.Comparator;
 
-import es.uniovi.asw.model.Comentario;
+import es.uniovi.asw.webService.ComentarioVista;
 
-public class ComparadorComentarios implements Comparator<Comentario> {
+public class ComparadorComentarios implements Comparator<ComentarioVista> {
 
 	@Override
-	public int compare(Comentario o1, Comentario o2) {
-		return new Integer(o2.getVotosTotal()).compareTo(new Integer(o1.getVotosTotal()));
+	public int compare(ComentarioVista o1, ComentarioVista o2) {
+		return new Integer(o2.getComentario().getVotosTotal()).compareTo(new Integer(o1.getComentario().getVotosTotal()));
 	}
 
 }

@@ -1,6 +1,7 @@
 package es.uniovi.asw.model;
 
 import java.io.Serializable;
+import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,6 +25,8 @@ public class VotoComentario implements Serializable{
 	public VotoComentario(Comentario comentario, Citizen citizen, boolean isAFavor) {
 		super();
 		this.isAFavor = isAFavor;
+		if (!comentario.getVotos().stream().map(v->v.getCitizen().getId()).
+				collect(Collectors.toList()).contains(citizen.getId()))
 		Association.VotarComentario.link(comentario,this,citizen);
 	}
 	public VotoComentario() {}

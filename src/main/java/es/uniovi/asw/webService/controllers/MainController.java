@@ -46,27 +46,33 @@ public class MainController {
     	if(userValidator.validate(username, password,"citi")){
     		Citizen c = Services.getSystemServices().findCitizenByUserAndPass("Seila_seila", "llFh9oTmjUI=");
     		session.setAttribute("user", c);
+    		session.setAttribute("admin", null);
     		
-    		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
-    		model.addAttribute("categorias", categorias);
-    		for (Categoria categoria: categorias) {
-    			Long idCategoria = categoria.getId();
-    			sugerencias = Services.getSystemServices().findSugerenciasByCategory(idCategoria);
-    			model.addAttribute("sugerencias"+idCategoria, sugerencias);
-    		}
-    		
-    		sugerencias = Services.getSystemServices().findSugerenciasByUserId(c.getId());
-    		model.addAttribute("sugerenciasUser", sugerencias);
+    		Actions.listarCategorias(model, c);
     		return "listaSolicitudes";
     	}
     	
     	else if(userValidator.validate(username, password,"admin")){
     		Administrador admin = Services.getSystemServices().findAdminByUserAndPass("admin", "admin");
     		session.setAttribute("admin", admin);
+    		session.setAttribute("user", null);
     		return "listaSolicitudesadmin";
     	}
 
     	return "login";	
+    }
+    
+    @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
+    public String ListaSol(HttpSession session,Model model) throws BusinessException {
+	    	List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
+			model.addAttribute("sugerencias", sugerencias);
+			
+			if (session.getAttribute("user") != null) {
+				Citizen c = (Citizen) session.getAttribute("user");
+				Actions.listarCategorias(model, c);
+				return "listaSolicitudes";
+			} else 
+				return "listaSolicitudesadmin";
     }
     
 }
