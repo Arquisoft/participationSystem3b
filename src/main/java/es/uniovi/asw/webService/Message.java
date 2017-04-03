@@ -1,6 +1,7 @@
 package es.uniovi.asw.webService;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
@@ -9,9 +10,9 @@ import es.uniovi.asw.model.VotoSugerencia;
 
 public class Message {
 	
-	public static final Gson gson = new Gson();
+	public static final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
 
-    public static String getMessage(Sugerencia sugerencia) {
+    public static String setMessage(Sugerencia sugerencia) {
         return gson.toJson(sugerencia);
     }
     

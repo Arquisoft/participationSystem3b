@@ -12,16 +12,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TCOMENTARIO")
 public class Comentario implements Serializable{
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
-	@ManyToOne
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
+	@ManyToOne @Expose
 	private Citizen citizen;
-	@ManyToOne
+	@ManyToOne @Expose
 	private Sugerencia sugerencia;
-	private String contenido;
+	@Expose private String contenido;
 	@OneToMany(mappedBy="comentario") 
 	private Set<VotoComentario> votos = new HashSet<>();
 	

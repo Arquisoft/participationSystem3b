@@ -14,23 +14,25 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 import es.uniovi.asw.model.types.SugerenciaStatus;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TSUGERENCIA")
 public class Sugerencia implements Serializable{
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
-	@ManyToOne
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
+	@ManyToOne @Expose
 	private Citizen citizen;
-	private String titulo;
-	private String contenido;
+	@Expose private String titulo;
+	@Expose private String contenido;
 	@OneToMany(mappedBy="sugerencia") 
 	private Set<Comentario> comentarios = new HashSet<>();
 	@OneToMany(mappedBy="sugerencia") 
 	private Set<VotoSugerencia> votos = new HashSet<>();
-	@Enumerated(EnumType.STRING) private SugerenciaStatus estado;
-	@ManyToOne
+	@Expose @Enumerated(EnumType.STRING) private SugerenciaStatus estado;
+	@ManyToOne @Expose
 	private Categoria categoria;
 	
 	

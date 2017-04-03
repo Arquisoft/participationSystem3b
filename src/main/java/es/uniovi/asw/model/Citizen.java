@@ -15,21 +15,23 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
+import com.google.gson.annotations.Expose;
+
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TCITIZENS")
 public class Citizen implements Serializable{
 	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
-	private String nombre;
-	private String apellidos;
-	private String email;
-	@Temporal(TemporalType.DATE) private Date fechaNacimiento;
-	private String direccion;
-	private String nacionalidad;
-	@NotNull private String DNI;
-	private String usuario;
-	private String password;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
+	@Expose private String nombre;
+	@Expose private String apellidos;
+	@Expose private String email;
+	@Expose @Temporal(TemporalType.DATE) private Date fechaNacimiento;
+	@Expose private String direccion;
+	@Expose private String nacionalidad;
+	@Expose @NotNull private String DNI;
+	@Expose private String usuario;
+	@Expose private String password;
 	//---------------------------------------------------------------------------
 	@OneToMany(mappedBy="citizen") 
 	private Set<Sugerencia> sugerencias = new HashSet<>();
@@ -214,7 +216,7 @@ public class Citizen implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Citizen [nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email
+		return "Citizen [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email
 				+ ", fechaNacimiento=" + fechaNacimiento + ", direccion=" + direccion + ", nacionalidad=" + nacionalidad
 				+ ", DNI=" + DNI + ", password=" + password + "]";
 	}

@@ -8,6 +8,8 @@ import javax.persistence.IdClass;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 import es.uniovi.asw.model.types.VotosSugerenciasKey;
 
 @SuppressWarnings("serial")
@@ -16,9 +18,9 @@ import es.uniovi.asw.model.types.VotosSugerenciasKey;
 @Table(name="TVOTOSUGERENCIA")
 public class VotoSugerencia implements Serializable{
 
-	@Id @ManyToOne private Sugerencia sugerencia;
-	@Id @ManyToOne private Citizen citizen;
-	private boolean isAFavor;
+	@Id @ManyToOne @Expose private Sugerencia sugerencia;
+	@Id @ManyToOne @Expose private Citizen citizen;
+	@Expose private boolean isAFavor;
 	
 	public VotoSugerencia(Sugerencia sugerencia, Citizen citizen, boolean isAFavor) {
 		super();

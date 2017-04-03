@@ -18,23 +18,25 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.google.gson.annotations.Expose;
+
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TCATEGORIA")
 public class Categoria implements Serializable{
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
 	@OneToMany(mappedBy="categoria") 
 	private Set<Sugerencia> sugerencias = new HashSet<>();
-	private String nombre;
+	@Expose private String nombre;
 	@Temporal(TemporalType.DATE)
-	private Date fechaInicio;
+	@Expose private Date fechaInicio;
 	@Temporal(TemporalType.DATE)
-	private Date fechaFin;
-	private int minimoVotos;
+	@Expose private Date fechaFin;
+	@Expose private int minimoVotos;
 	@ElementCollection
     @CollectionTable(name = "TPALABRAS")
     @Column(name="PALABRA")
-	private List<String> palabrasNoPermitidas;
+	@Expose private List<String> palabrasNoPermitidas;
 	
 	public Categoria(String nombre, Date fechaInicio, Date fechaFin, int minimoVotos) {
 		super();

@@ -4,6 +4,7 @@ import es.uniovi.asw.business.impl.Command;
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.persistence.util.Jpa;
+import es.uniovi.asw.webService.Message;
 
 public class AddComentario implements Command {
 	
@@ -17,6 +18,7 @@ public class AddComentario implements Command {
 	public Object execute() throws BusinessException {
 		Jpa.getManager().persist(comentario);
 		Jpa.getManager().merge(comentario.getSugerencia());
+		Message.setMessage(comentario); //Enviar kafka
 		return comentario;
 	}
 

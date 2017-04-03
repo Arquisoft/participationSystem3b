@@ -1,10 +1,8 @@
 package es.uniovi.asw.business.impl.system;
 
 import es.uniovi.asw.business.impl.Command;
-import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.persistence.AdministradorFinder;
-import es.uniovi.asw.persistence.util.Jpa;
 
 public class FindAdminByUserAndPass implements Command {
 	

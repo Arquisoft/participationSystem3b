@@ -8,13 +8,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TADMINISTRADOR")
 public class Administrador implements Serializable{
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
-	private String usuario;
-	private String password;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
+	@Expose private String usuario;
+	@Expose private String password;
 	
 	public Administrador(String usuario, String password) {
 		super();

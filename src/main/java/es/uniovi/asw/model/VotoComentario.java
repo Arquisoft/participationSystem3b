@@ -8,6 +8,8 @@ import javax.persistence.IdClass;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 import es.uniovi.asw.model.types.VotosComentariosKey;
 
 @SuppressWarnings("serial")
@@ -15,9 +17,9 @@ import es.uniovi.asw.model.types.VotosComentariosKey;
 @IdClass(VotosComentariosKey.class)
 @Table(name="TVOTOCOMENTARIO")
 public class VotoComentario implements Serializable{
-	@Id @ManyToOne private Comentario comentario;
-	@Id @ManyToOne private Citizen citizen;
-	private boolean isAFavor;
+	@Id @ManyToOne @Expose private Comentario comentario;
+	@Id @ManyToOne @Expose private Citizen citizen;
+	@Expose private boolean isAFavor;
 
 	public VotoComentario(Comentario comentario, Citizen citizen, boolean isAFavor) {
 		super();
