@@ -16,7 +16,7 @@ import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.model.types.SugerenciaStatus;
 
-public class AdminService {
+public class AdminServiceTest {
 	
 	@Test
 	public void addDeleteCategoriaTest() throws BusinessException {

@@ -3,9 +3,6 @@ package es.uniovi.asw.model;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -19,9 +16,6 @@ import javax.persistence.Table;
 import com.google.gson.annotations.Expose;
 
 import es.uniovi.asw.model.types.SugerenciaStatus;
-import es.uniovi.asw.util.comparador.ComparadorComentarios;
-import es.uniovi.asw.util.comparador.Comparator;
-import scala.collection.parallel.ParIterableLike.Collect;
 
 @SuppressWarnings("serial")
 @Entity

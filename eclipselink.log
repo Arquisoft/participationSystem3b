@@ -1,0 +1,296 @@
+[EL Fine]: server: 2017-04-03 23:57:42.863--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2017-04-03 23:57:43.228--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Sugerencia] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.234--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-04-03 23:57:43.236--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field categoria] is being defaulted to: class es.uniovi.asw.model.Categoria.
+[EL Config]: metadata: 2017-04-03 23:57:43.237--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.238--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.238--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Comentario] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.238--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-04-03 23:57:43.238--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.239--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.239--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Categoria] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.239--ServerSession(38262958)--Thread(Thread[main,5,main])--The target class (reference) class for the element collection mapping element [field palabrasNoPermitidas] is being defaulted to: class java.lang.String.
+[EL Config]: metadata: 2017-04-03 23:57:43.24--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.24--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoComentario] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The element [field comentario] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field comentario] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoSugerencia] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-04-03 23:57:43.241--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-04-03 23:57:43.242--ServerSession(38262958)--Thread(Thread[main,5,main])--The element [field sugerencia] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-04-03 23:57:43.242--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.242--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Administrador] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.242--ServerSession(38262958)--Thread(Thread[main,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Citizen] is set to [FIELD].
+[EL Config]: metadata: 2017-04-03 23:57:43.242--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votosComentarios] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.243--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field votosSugerencias] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.243--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.243--ServerSession(38262958)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.243--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Sugerencia] is being defaulted to: Sugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.254--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
+[EL Config]: metadata: 2017-04-03 23:57:43.255--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [estado] is being defaulted to: ESTADO.
+[EL Config]: metadata: 2017-04-03 23:57:43.255--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [titulo] is being defaulted to: TITULO.
+[EL Config]: metadata: 2017-04-03 23:57:43.256--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.256--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Comentario] is being defaulted to: Comentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.256--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
+[EL Config]: metadata: 2017-04-03 23:57:43.256--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.256--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Categoria] is being defaulted to: Categoria.
+[EL Config]: metadata: 2017-04-03 23:57:43.257--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [fechaInicio] is being defaulted to: FECHAINICIO.
+[EL Config]: metadata: 2017-04-03 23:57:43.257--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [minimoVotos] is being defaulted to: MINIMOVOTOS.
+[EL Config]: metadata: 2017-04-03 23:57:43.258--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.258--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
+[EL Config]: metadata: 2017-04-03 23:57:43.258--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [fechaFin] is being defaulted to: FECHAFIN.
+[EL Config]: metadata: 2017-04-03 23:57:43.258--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoComentario] is being defaulted to: VotoComentario.
+[EL Config]: metadata: 2017-04-03 23:57:43.259--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
+[EL Config]: metadata: 2017-04-03 23:57:43.259--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoSugerencia] is being defaulted to: VotoSugerencia.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Administrador] is being defaulted to: Administrador.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Citizen] is being defaulted to: Citizen.
+[EL Config]: metadata: 2017-04-03 23:57:43.26--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [apellidos] is being defaulted to: APELLIDOS.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [fechaNacimiento] is being defaulted to: FECHANACIMIENTO.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [direccion] is being defaulted to: DIRECCION.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [nacionalidad] is being defaulted to: NACIONALIDAD.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Config]: metadata: 2017-04-03 23:57:43.261--ServerSession(38262958)--Thread(Thread[main,5,main])--The column name for element [DNI] is being defaulted to: DNI.
+[EL Config]: metadata: 2017-04-03 23:57:43.269--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.269--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.269--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field comentario] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.269--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [comentario] is being defaulted to: COMENTARIO_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.269--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.269--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.27--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.27--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.276--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field palabrasNoPermitidas] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.276--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [palabrasNoPermitidas] is being defaulted to: Categoria_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field categoria] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [categoria] is being defaulted to: CATEGORIA_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
+[EL Config]: metadata: 2017-04-03 23:57:43.278--ServerSession(38262958)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
+[EL Info]: 2017-04-03 23:57:43.906--ServerSession(38262958)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
+[EL Fine]: connection: 2017-04-03 23:57:44.104--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.HSQLPlatform
+[EL Config]: connection: 2017-04-03 23:57:44.123--ServerSession(38262958)--Connection(833420622)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+	platform=>HSQLPlatform
+	user name=> "sa"
+	datasource URL=> "jdbc:hsqldb:hsql://localhost"
+))
+[EL Config]: connection: 2017-04-03 23:57:44.229--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--Connected: jdbc:hsqldb:hsql://localhost
+	User: SA
+	Database: HSQL Database Engine  Version: 2.2.9
+	Driver: HSQL Database Engine Driver  Version: 2.2.9
+[EL Info]: connection: 2017-04-03 23:57:44.331--ServerSession(38262958)--Thread(Thread[main,5,main])--/file:/C:/Users/Seila/Desktop/ASW/participationSystem3b/target/classes/_citizens login successful
+[EL Fine]: sql: 2017-04-03 23:57:44.342--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.345--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.345--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.346--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.346--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.347--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.347--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.348--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.348--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TPALABRAS DROP CONSTRAINT FK_TPALABRAS_Categoria_ID
+[EL Fine]: sql: 2017-04-03 23:57:44.349--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TVOTOCOMENTARIO
+[EL Fine]: sql: 2017-04-03 23:57:44.349--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TADMINISTRADOR
+[EL Fine]: sql: 2017-04-03 23:57:44.35--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TCOMENTARIO
+[EL Fine]: sql: 2017-04-03 23:57:44.35--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TSUGERENCIA
+[EL Fine]: sql: 2017-04-03 23:57:44.35--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TVOTOSUGERENCIA
+[EL Fine]: sql: 2017-04-03 23:57:44.351--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TCATEGORIA
+[EL Fine]: sql: 2017-04-03 23:57:44.351--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TCITIZENS
+[EL Fine]: sql: 2017-04-03 23:57:44.351--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--DROP TABLE TPALABRAS
+[EL Fine]: sql: 2017-04-03 23:57:44.354--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TVOTOCOMENTARIO (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, COMENTARIO_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, COMENTARIO_ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.355--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TADMINISTRADOR (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, PASSWORD VARCHAR(255), USUARIO VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.357--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TCOMENTARIO (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, CONTENIDO VARCHAR(255), CITIZEN_ID BIGINT, SUGERENCIA_ID BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.358--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TSUGERENCIA (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, CONTENIDO VARCHAR(255), ESTADO VARCHAR(255), TITULO VARCHAR(255), CATEGORIA_ID BIGINT, CITIZEN_ID BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.359--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TVOTOSUGERENCIA (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, SUGERENCIA_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, SUGERENCIA_ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.359--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TCATEGORIA (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, FECHAFIN DATE, FECHAINICIO DATE, MINIMOVOTOS INTEGER, NOMBRE VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.362--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TCITIZENS (ID BIGINT GENERATED BY DEFAULT AS IDENTITY (START WITH 1 INCREMENT BY 1) NOT NULL, DNI VARCHAR(255), APELLIDOS VARCHAR(255), DIRECCION VARCHAR(255), EMAIL VARCHAR(255), FECHANACIMIENTO DATE, NACIONALIDAD VARCHAR(255), NOMBRE VARCHAR(255), PASSWORD VARCHAR(255), USUARIO VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-04-03 23:57:44.363--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--CREATE TABLE TPALABRAS (Categoria_ID BIGINT, PALABRA VARCHAR(255))
+[EL Fine]: sql: 2017-04-03 23:57:44.363--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOCOMENTARIO ADD CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID FOREIGN KEY (COMENTARIO_ID) REFERENCES TCOMENTARIO (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.364--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOCOMENTARIO ADD CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.365--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TCOMENTARIO ADD CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.365--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TCOMENTARIO ADD CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSUGERENCIA (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.365--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TSUGERENCIA ADD CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID FOREIGN KEY (CATEGORIA_ID) REFERENCES TCATEGORIA (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.366--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TSUGERENCIA ADD CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.366--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOSUGERENCIA ADD CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.367--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TVOTOSUGERENCIA ADD CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSUGERENCIA (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.367--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--ALTER TABLE TPALABRAS ADD CONSTRAINT FK_TPALABRAS_Categoria_ID FOREIGN KEY (Categoria_ID) REFERENCES TCATEGORIA (ID)
+[EL Fine]: sql: 2017-04-03 23:57:44.368--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (1,'admin','admin')
+[EL Fine]: sql: 2017-04-03 23:57:44.369--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (2,'admin2','admin2')
+[EL Fine]: sql: 2017-04-03 23:57:44.369--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (3,'admin3','admin3')
+[EL Fine]: sql: 2017-04-03 23:57:44.37--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (1,'71435345N','Prada','direccion','seila@gmail.com','1996-01-15','espa','Seila','llFh9oTmjUI=','Seila_seila');
+[EL Fine]: sql: 2017-04-03 23:57:44.37--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (2,'72344554T','Prada','direccion2','seila2@gmail.com','1996-01-15','espa','Seila2','llFh9oTmjUI=','Seila2_seila');
+[EL Fine]: sql: 2017-04-03 23:57:44.371--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (3,'74564534E','Prada','direccion3','seila3@gmail.com','1996-01-15','espa','Seila3','llFh9oTmjUI=','Seila3_seila');
+[EL Fine]: sql: 2017-04-03 23:57:44.371--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (4,'45654665K','Watson','direccion4','david@gmail.com','1986-04-19','eng','David','llFh9oTmjUI=','David_david');
+[EL Fine]: sql: 2017-04-03 23:57:44.372--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (5,'45654465V','Rodriguez','direccion5','borja@gmail.com','1995-07-28','espa','Borja','llFh9oTmjUI=','Borja_borja');
+[EL Fine]: sql: 2017-04-03 23:57:44.373--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (6,'56767567Q','Fernandez','direccion6','ruben@gmail.com','1993-03-02','espa','Ruben','llFh9oTmjUI=','Ruben_ruben');
+[EL Fine]: sql: 2017-04-03 23:57:44.373--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (7,'38769345L','Ramon','direccion7','juan@gmail.com','1994-08-21','espa','Juan','llFh9oTmjUI=','Juan_juan');
+[EL Fine]: sql: 2017-04-03 23:57:44.374--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (8,'67569789I','Garcia','direccion8','laura@gmail.com','1991-12-10','espa','Laura','llFh9oTmjUI=','Laura_laura');
+[EL Fine]: sql: 2017-04-03 23:57:44.374--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (1,'2017-10-04','2017-01-04','5','Categoria1')
+[EL Fine]: sql: 2017-04-03 23:57:44.375--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (2,'2017-10-12','2017-01-01','2','Categoria2')
+[EL Fine]: sql: 2017-04-03 23:57:44.375--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (3,'2017-10-04','2017-01-04','3','Categoria3')
+[EL Fine]: sql: 2017-04-03 23:57:44.376--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (4,'2017-10-03','2017-01-02','5','Categoria4')
+[EL Fine]: sql: 2017-04-03 23:57:44.377--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (1,'prueba')
+[EL Fine]: sql: 2017-04-03 23:57:44.377--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (1,'prueba2')
+[EL Fine]: sql: 2017-04-03 23:57:44.378--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (1,'prueba3')
+[EL Fine]: sql: 2017-04-03 23:57:44.378--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba')
+[EL Fine]: sql: 2017-04-03 23:57:44.378--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba2')
+[EL Fine]: sql: 2017-04-03 23:57:44.379--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba3')
+[EL Fine]: sql: 2017-04-03 23:57:44.379--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba')
+[EL Fine]: sql: 2017-04-03 23:57:44.38--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba2')
+[EL Fine]: sql: 2017-04-03 23:57:44.38--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba3')
+[EL Fine]: sql: 2017-04-03 23:57:44.381--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba')
+[EL Fine]: sql: 2017-04-03 23:57:44.381--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba2')
+[EL Fine]: sql: 2017-04-03 23:57:44.381--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba3')
+[EL Fine]: sql: 2017-04-03 23:57:44.382--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (1,'contenido de la primera sugerencia','Aceptada','Sugerencia1',1,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.382--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (2,'contenido de la segunda sugerencia','EnVotacion','Sugerencia2',1,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.383--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (3,'contenido de la tercera sugerencia','EnVotacion','Sugerencia3',1,4)
+[EL Fine]: sql: 2017-04-03 23:57:44.383--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (4,'contenido de la cuarta sugerencia','EnVotacion','Sugerencia4',1,8)
+[EL Fine]: sql: 2017-04-03 23:57:44.383--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (5,'contenido de la quinta sugerencia','EnVotacion','Sugerencia5',2,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.384--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (6,'contenido de la sexta sugerencia','EnVotacion','Sugerencia6',2,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.384--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (7,'contenido de la septima sugerencia','Anulada','Sugerencia7',2,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.385--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (8,'contenido de la octava sugerencia','EnVotacion','Sugerencia8',2,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.385--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (9,'contenido de la novena sugerencia','EnVotacion','Sugerencia9',3,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.385--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (10,'contenido de la decima sugerencia','EnVotacion','Sugerencia10',3,5)
+[EL Fine]: sql: 2017-04-03 23:57:44.386--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (11,'contenido de la undecima sugerencia','EnVotacion','Sugerencia11',3,6)
+[EL Fine]: sql: 2017-04-03 23:57:44.386--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (12,'contenido de la duodecima sugerencia','EnVotacion','Sugerencia12',3,7)
+[EL Fine]: sql: 2017-04-03 23:57:44.386--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (13,'contenido de la decimotercera sugerencia','EnVotacion','Sugerencia13',1,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.387--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (14,'contenido de la decimocuarta sugerencia','EnVotacion','Sugerencia14',1,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.387--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (15,'contenido de la decimoquinta sugerencia','EnVotacion','Sugerencia15',1,5)
+[EL Fine]: sql: 2017-04-03 23:57:44.387--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (16,'contenido de la decimosexta sugerencia','EnVotacion','Sugerencia16',1,4)
+[EL Fine]: sql: 2017-04-03 23:57:44.387--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (17,'contenido de la decimoseptima sugerencia','Anulada','Sugerencia17',4,8)
+[EL Fine]: sql: 2017-04-03 23:57:44.388--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (18,'contenido de la decimooctava sugerencia','Aceptada','Sugerencia18',4,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.388--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (19,'contenido de la decimonovena sugerencia','Aceptada','Sugerencia19',4,7)
+[EL Fine]: sql: 2017-04-03 23:57:44.389--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (1,'contenido primer comentario',1,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.389--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (2,'contenido segundo comentario',2,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.389--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (3,'contenido tercer comentario',1,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.39--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.39--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.39--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (FALSE,3,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.391--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.391--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,5,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.391--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,6,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.391--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,7,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.392--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,8,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.392--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.393--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.393--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,3,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.393--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.394--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.394--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.394--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (FALSE,3,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.395--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.395--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.395--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.396--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.396--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,1)
+[EL Fine]: sql: 2017-04-03 23:57:44.396--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.397--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.397--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,3,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.397--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,2)
+[EL Fine]: sql: 2017-04-03 23:57:44.398--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.398--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.399--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.399--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,3)
+[EL Fine]: sql: 2017-04-03 23:57:44.399--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,18)
+[EL Fine]: sql: 2017-04-03 23:57:44.4--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,18)
+[EL Fine]: sql: 2017-04-03 23:57:44.4--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,18)
+[EL Fine]: sql: 2017-04-03 23:57:44.4--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,18)
+[EL Fine]: sql: 2017-04-03 23:57:44.401--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,7,18)
+[EL Fine]: sql: 2017-04-03 23:57:44.401--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,8,18)
+[EL Fine]: sql: 2017-04-03 23:57:44.401--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.402--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.402--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.402--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.403--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,7,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.403--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,8,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.403--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,5,19)
+[EL Fine]: sql: 2017-04-03 23:57:44.43--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
+[EL Fine]: sql: 2017-04-03 23:57:44.435--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2017-04-03 23:57:44.438--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2017-04-03 23:57:44.442--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [2]
+[EL Fine]: sql: 2017-04-03 23:57:44.444--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [4]
+[EL Fine]: sql: 2017-04-03 23:57:44.445--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [8]
+[EL Fine]: sql: 2017-04-03 23:57:44.446--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+	bind => [2]
+[EL Fine]: sql: 2017-04-03 23:57:44.447--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [3]
+[EL Fine]: sql: 2017-04-03 23:57:44.449--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+	bind => [3]
+[EL Fine]: sql: 2017-04-03 23:57:44.45--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [5]
+[EL Fine]: sql: 2017-04-03 23:57:44.451--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [6]
+[EL Fine]: sql: 2017-04-03 23:57:44.452--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+	bind => [7]
+[EL Fine]: sql: 2017-04-03 23:57:44.454--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+	bind => [4]
+[EL Fine]: sql: 2017-04-03 23:57:44.46--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2017-04-03 23:57:44.465--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [2]
+[EL Fine]: sql: 2017-04-03 23:57:44.466--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [3]
+[EL Fine]: sql: 2017-04-03 23:57:44.468--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [4]
+[EL Fine]: sql: 2017-04-03 23:57:44.468--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [5]
+[EL Fine]: sql: 2017-04-03 23:57:44.469--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [6]
+[EL Fine]: sql: 2017-04-03 23:57:44.469--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [7]
+[EL Fine]: sql: 2017-04-03 23:57:44.47--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [8]
+[EL Fine]: sql: 2017-04-03 23:57:44.47--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [9]
+[EL Fine]: sql: 2017-04-03 23:57:44.47--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [10]
+[EL Fine]: sql: 2017-04-03 23:57:44.471--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [11]
+[EL Fine]: sql: 2017-04-03 23:57:44.471--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [12]
+[EL Fine]: sql: 2017-04-03 23:57:44.472--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [13]
+[EL Fine]: sql: 2017-04-03 23:57:44.472--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [14]
+[EL Fine]: sql: 2017-04-03 23:57:44.473--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [15]
+[EL Fine]: sql: 2017-04-03 23:57:44.473--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [16]
+[EL Fine]: sql: 2017-04-03 23:57:44.474--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [17]
+[EL Fine]: sql: 2017-04-03 23:57:44.475--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [18]
+[EL Fine]: sql: 2017-04-03 23:57:44.476--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+	bind => [19]
+[EL Fine]: sql: 2017-04-03 23:57:44.582--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+	bind => [Seila_seila, llFh9oTmjUI=]
+[EL Fine]: sql: 2017-04-03 23:57:44.583--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, CONTENIDO, CITIZEN_ID, SUGERENCIA_ID FROM TCOMENTARIO WHERE (CITIZEN_ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2017-04-03 23:57:44.585--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, CONTENIDO, CITIZEN_ID, SUGERENCIA_ID FROM TCOMENTARIO WHERE (SUGERENCIA_ID = ?)
+	bind => [19]
+[EL Fine]: sql: 2017-04-03 23:57:44.587--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, CONTENIDO, CITIZEN_ID, SUGERENCIA_ID FROM TCOMENTARIO WHERE (ID = ?)
+	bind => [0]
+[EL Fine]: sql: 2017-04-03 23:57:44.597--ClientSession(1138190994)--Connection(1601333072)--Thread(Thread[main,5,main])--INSERT INTO TCOMENTARIO (CONTENIDO, CITIZEN_ID, SUGERENCIA_ID) VALUES (?, ?, ?)
+	bind => [comentario de prueba2, 1, 19]
+[EL Fine]: sql: 2017-04-03 23:57:44.597--ClientSession(1138190994)--Connection(1601333072)--Thread(Thread[main,5,main])--CALL IDENTITY()
+[EL Fine]: sql: 2017-04-03 23:57:44.603--ClientSession(1512759723)--Connection(1601333072)--Thread(Thread[main,5,main])--UPDATE TCOMENTARIO SET CITIZEN_ID = ?, SUGERENCIA_ID = ? WHERE (ID = ?)
+	bind => [null, null, 4]
+[EL Fine]: sql: 2017-04-03 23:57:44.604--ClientSession(1512759723)--Connection(1601333072)--Thread(Thread[main,5,main])--DELETE FROM TCOMENTARIO WHERE (ID = ?)
+	bind => [4]
+[EL Fine]: sql: 2017-04-03 23:57:44.605--ServerSession(38262958)--Connection(1601333072)--Thread(Thread[main,5,main])--SELECT ID, CONTENIDO, CITIZEN_ID, SUGERENCIA_ID FROM TCOMENTARIO WHERE (ID = ?)
+	bind => [4]
