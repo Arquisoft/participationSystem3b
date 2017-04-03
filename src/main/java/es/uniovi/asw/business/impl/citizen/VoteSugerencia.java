@@ -19,6 +19,7 @@ public class VoteSugerencia implements Command{
 	@Override
 	public Object execute() throws BusinessException {
 		Jpa.getManager().persist(voto);
+		Jpa.getManager().merge(voto.getSugerencia());
 		Set<VotoSugerencia> votos = voto.getSugerencia().getVotos();
 		int n = 0;
 		for(VotoSugerencia v:votos){

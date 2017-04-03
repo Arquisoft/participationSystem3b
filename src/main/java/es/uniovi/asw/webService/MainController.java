@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import es.uniovi.asw.business.Services;
 import es.uniovi.asw.model.Categoria;
 import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
@@ -65,7 +66,7 @@ public class MainController {
     		Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
     		SugerenciaVista sugerenciaVista = new SugerenciaVista(sugerencia);
     		model.addAttribute("s", sugerenciaVista);
-    		System.out.println(sugerenciaVista.getPosVotes());
+ 
     		return "solicitud";
     }
     
@@ -115,6 +116,18 @@ public class MainController {
     	
     	SugerenciaVista sVista = new SugerenciaVista(sugerencia);
     	model.addAttribute("s", sVista);
+    }
+    
+    @RequestMapping(value = "/Comentario", method = RequestMethod.POST)
+    public String Comentario(HttpSession session,Model model, @RequestParam("sugerencia") Long id, @RequestParam String mensaje) throws BusinessException {
+    		Citizen c = (Citizen) session.getAttribute("user");
+    		Sugerencia sugerencia = Services.getSystemServices().findSugerenciaById(id);
+    		Comentario comentario = new Comentario(c, sugerencia, mensaje);
+    		
+    		Services.getCitizenServices().addComentario(comentario);
+    		SugerenciaVista sVista = new SugerenciaVista(sugerencia);
+        	model.addAttribute("s", sVista);
+    		return "solicitud";
     }
     
 }

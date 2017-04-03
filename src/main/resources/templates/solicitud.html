@@ -54,9 +54,9 @@
 					                <!-- the comment box -->
 					            	<div class="well">
 					                    <h4><i class="fa fa-paper-plane-o"></i>Deja tu comentario:</h4>
-					                    <form th:action="@{/comentario}" method="POST">
+					                    <form th:action="@{/Comentario(sugerencia=${s.sugerencia.id})}" method="POST">
 					                        <div class="form-group">
-					                            <textarea class="form-control" rows="3"></textarea>
+					                            <textarea name="mensaje" class="form-control" rows="3"></textarea>
 					                        </div>
 					                        <button type="submit" name="say" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
 					                    </form>

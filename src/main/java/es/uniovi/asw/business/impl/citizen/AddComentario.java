@@ -16,6 +16,7 @@ public class AddComentario implements Command {
 	@Override
 	public Object execute() throws BusinessException {
 		Jpa.getManager().persist(comentario);
+		Jpa.getManager().merge(comentario.getSugerencia());
 		return comentario;
 	}
 
