@@ -53,6 +53,13 @@ public class MainController {
     	return "login";	
     }
     
+    @RequestMapping(value = "/salir", method = RequestMethod.POST)
+    public String Salir(HttpSession session,Model model) {
+    	session.setAttribute("user", null);
+    	session.setAttribute("admin", null);
+    	return "login";
+    }
+    
     @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
     public String ListaSol(HttpSession session,Model model) throws BusinessException {
 			

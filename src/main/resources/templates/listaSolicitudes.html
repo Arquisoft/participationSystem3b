@@ -10,6 +10,11 @@
       <title>Lista de solicitudes</title>
 </head>
 <body>
+	<form th:action="@{/salir}" method="POST"> 
+				<button id="salir" type="submit" name="salir" class="btn btn-primary">
+	     		Salir de tu cuenta
+	 			</button>
+	</form>
 	<form th:action="@{/crear}" method="POST"> 
 		<button id="crear" type="submit" name="crear" class="btn btn-primary">
 	     Crea tu propuesta

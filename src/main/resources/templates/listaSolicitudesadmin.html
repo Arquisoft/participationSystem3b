@@ -51,6 +51,11 @@ $(document).ready(function() {
       <title>Lista de solicitudes</title>
 </head>
 <body>
+	<form th:action="@{/salir}" method="POST"> 
+				<button id="salir" type="submit" name="salir" class="btn btn-primary">
+	     		Salir de tu cuenta
+	 			</button>
+	 </form>
 	<form th:action="@{/modificarCat}" method="POST"> 
 		<p>
 			<button id="Mod" type="submit" name="modcat" class="btn btn-primary">
