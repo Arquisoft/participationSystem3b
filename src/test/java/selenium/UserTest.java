@@ -9,7 +9,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import es.uniovi.asw.Application;
 
-public class LoginTest {
+public class UserTest {
 	
 	 private WebDriver driver;
 	 private String baseUrl;
@@ -23,18 +23,19 @@ public class LoginTest {
 	}
 	
 	@Test
-	public void loginUserAdmin() {
+	public void addCategoria() {
 		driver.get(baseUrl+"/");
 		SeleniumUtils.entrarComoUsuario(driver);
+	
+		SeleniumUtils.clickButton(driver, "crear");
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "titulo", 10);
+		SeleniumUtils.textoPresentePagina(driver, "Titulo");
 		
-		SeleniumUtils.EsperaCargaPagina(driver, "id", "crear", 10);
-		SeleniumUtils.textoPresentePagina(driver, "Crea tu propuesta");
-		SeleniumUtils.clickButton(driver, "salir");
+		SeleniumUtils.escribirInput(driver, "titulo", "Prueba");
+		SeleniumUtils.clickButton(driver, "add");
 		
-		SeleniumUtils.entrarComoAdmin(driver);
-		
-		SeleniumUtils.EsperaCargaPagina(driver, "id", "salir", 10);
-		SeleniumUtils.textoNoPresentePagina(driver, "Crea tu propuesta");
+		//SeleniumUtils.EsperaCargaPagina(driver, "id", "crear", 10);
+		//SeleniumUtils.textoPresentePagina(driver, "Prueba");
 	}
 
 }

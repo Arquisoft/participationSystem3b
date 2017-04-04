@@ -74,6 +74,7 @@ public class SeleniumUtils {
 		}
 		
 		static public void clickButton(WebDriver driver, String id) {
+			SeleniumUtils.EsperaCargaPagina(driver, "id", id, 10);
 			WebElement boton = driver.findElement(By
 					.id(id));
 			boton.click();
@@ -83,5 +84,19 @@ public class SeleniumUtils {
 			WebElement login = SeleniumUtils.EsperaCargaPagina(driver, "id",
 					id, 10).get(0);
 			login.sendKeys(mensaje);
+		}
+		
+		static public void entrarComoUsuario(WebDriver driver) {
+			SeleniumUtils.EsperaCargaPagina(driver, "id", "loginButton", 10);
+			SeleniumUtils.textoPresentePagina(driver, "Inicia sesion");
+			
+			SeleniumUtils.clickButton(driver, "loginButton");
+		}
+		
+		static public void entrarComoAdmin(WebDriver driver) {
+			SeleniumUtils.EsperaCargaPagina(driver, "id", "loginButton", 10);
+			SeleniumUtils.escribirInput(driver, "username", "admin");
+			
+			SeleniumUtils.clickButton(driver, "loginButton");
 		}
 }
