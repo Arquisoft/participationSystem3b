@@ -15,7 +15,7 @@
 	</named-query>
 	
 	<named-query name="Categoria.findAll">
-		<query>select c from Categoria c</query>
+		<query><![CDATA[select c from Categoria c where c.id > 1]]></query>
 	</named-query>
 	
 	<named-query name="Sugerencia.findAll">

@@ -15,7 +15,10 @@ import javax.persistence.Table;
 
 import com.google.gson.annotations.Expose;
 
+import es.uniovi.asw.business.Services;
+import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.model.types.SugerenciaStatus;
+import es.uniovi.asw.persistence.util.Jpa;
 
 @SuppressWarnings("serial")
 @Entity
@@ -121,7 +124,11 @@ public class Sugerencia implements Serializable{
 		return getPosVotes() - getNegVotes();
 	}
 
-	public void borrar(){
+	public void borrar() throws BusinessException{
+		for(Comentario c:comentarios)
+			Services.getCitizenServices().deleteComentario(c.getId());
+		for(VotoSugerencia v:votos)
+			Jpa.getManager().remove(v);
 		Association.Sugerir.unlink(citizen,this, categoria);
 	}
 

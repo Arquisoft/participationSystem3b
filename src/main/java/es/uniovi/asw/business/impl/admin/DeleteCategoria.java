@@ -15,10 +15,14 @@ public class DeleteCategoria implements Command {
 
 	@Override
 	public Object execute() throws BusinessException {
+		Categoria defecto = Jpa.getManager().find(Categoria.class, 1L);
 		Categoria categoria = Jpa.getManager().find(Categoria.class, idCategoria);
+
 		
-		categoria.borrar(); //Hace unlink entre sugerencia y categoria
+		categoria.borrar(defecto); //Hace unlink entre sugerencia y categoria
 		Jpa.getManager().remove(categoria);
+		
+
 		return categoria;
 	}
 

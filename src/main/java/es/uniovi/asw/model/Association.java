@@ -27,6 +27,11 @@ public class Association {
 			
 			sugerencia._setCategoria(null);
 		}
+		
+		public static void link(Sugerencia sugerencia, Categoria categoria){
+			sugerencia._setCategoria(categoria);
+			categoria._getSugerencias().add(sugerencia);
+		}
 
 	}
 	
