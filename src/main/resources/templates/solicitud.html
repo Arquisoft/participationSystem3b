@@ -30,15 +30,15 @@
 			</div>
 			<div class="row">
 				<p>
-					<form th:action="@{/VotoPositivo(sugerencia=${s.sugerencia.id})}" method="POST">
-				       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+					<form style="display: inline;" th:action="@{/VotoPositivo(sugerencia=${s.sugerencia.id})}" method="POST">
+				       <button id="VotoPositivo" type="submit" class="btn btn-primary" style=" display: inline;background-color: white; border-color: transparent;">
 				       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
-				       </button><li th:text="${s.posVotes}"></li>
+				       </button><li style="display: inline;" th:text="${s.posVotes}"></li>
 			        </form>
-			       <form th:action="@{/VotoNegativo(sugerencia=${s.sugerencia.id})}" method="POST">
-				       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+			       <form style="display: inline;" th:action="@{/VotoNegativo(sugerencia=${s.sugerencia.id})}" method="POST">
+				       <button id="VotoNegativo" type="submit" class="btn btn-primary" style=" display: inline; background-color: white; border-color: transparent;">
 				     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
-				       </button><li th:text="${s.negVotes}"></li> 
+				       </button><li style="display: inline;" th:text="${s.negVotes}"></li> 
 			        </form>
 			    </p>
 			</div>
@@ -73,15 +73,15 @@
 						                      </h4>
 						                      <p th:text="${com.comentario.contenido}"></p>
 						                      <p>
-												<form th:action="@{/VotoPositivoCom(comentario=${com.comentario.id})}" method="POST">
-											       <button id="VotoPositivo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
-											       		<a><i id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
-											       </button><li th:text="${com.posVotes}"></li>
+												<form  style="display: inline;"  th:action="@{/VotoPositivoCom(comentario=${com.comentario.id})}" method="POST">
+											       <button id="VotoPositivo" type="submit" class="btn btn-primary" style=" display: inline;background-color: white; border-color: transparent;">
+											       		<a><i style="display: inline;" id="like" class="glyphicon glyphicon-thumbs-up"></i></a>
+											       </button><li style="display: inline;" th:text="${com.posVotes}"></li>
 										        </form>
-										       <form th:action="@{/VotoNegativoCom(comentario=${com.comentario.id})}" method="POST">
-											       <button id="VotoNegativo" type="submit" class="btn btn-primary" style="background-color: white; border-color: transparent;">
-											     		<a><i id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
-											       </button><li th:text="${com.negVotes}"></li> 
+										       <form style="display: inline;"  th:action="@{/VotoNegativoCom(comentario=${com.comentario.id})}" method="POST">
+											       <button id="VotoNegativo" type="submit" class="btn btn-primary" style=" display: inline;background-color: white; border-color: transparent;">
+											     		<a><i style="display: inline;" id="dislike" class="glyphicon glyphicon-thumbs-down"></i></a>
+											       </button><li style="display: inline;" th:text="${com.negVotes}"></li> 
 										        </form>
 			    							  </p>
 						                      	
