@@ -3,7 +3,6 @@ package es.uniovi.asw.webService.controllers;
 
 import javax.servlet.http.HttpSession;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,15 +14,11 @@ import es.uniovi.asw.business.Services;
 import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.exception.BusinessException;
-import es.uniovi.asw.producers.KafkaProducer;
 import es.uniovi.asw.webService.userValidator;
 
 @Controller
 @Scope("session")
 public class MainController {
-	
-	 @Autowired
-	 private KafkaProducer kafkaProducer;
 	 
     @RequestMapping("/")
     public String landing(Model model) {
