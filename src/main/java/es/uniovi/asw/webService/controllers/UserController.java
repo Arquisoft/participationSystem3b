@@ -21,7 +21,6 @@ import es.uniovi.asw.model.VotoComentario;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.model.types.SugerenciaStatus;
-import es.uniovi.asw.persistence.util.Jpa;
 import es.uniovi.asw.producers.KafkaProducer;
 import es.uniovi.asw.producers.Topics;
 import es.uniovi.asw.webService.Message;
@@ -73,7 +72,7 @@ public class UserController {
 			model.addAttribute("sugerencias", sugerencias);
 			
 			Citizen citizen = (Citizen) session.getAttribute("user");
-			Actions.listarCategorias(model, citizen);
+			Actions.listarSugerencias(model, citizen);
 			return "listaSolicitudes";
 		}
 	    
@@ -88,7 +87,7 @@ public class UserController {
 	    		
 	    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 				model.addAttribute("sugerencias", sugerencias);
-				Actions.listarCategorias(model, c);
+				Actions.listarSugerencias(model, c);
 				
 	    		return "listaSolicitudes";
 	    }

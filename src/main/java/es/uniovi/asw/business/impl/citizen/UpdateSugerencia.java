@@ -18,6 +18,7 @@ public class UpdateSugerencia implements Command {
 	public Object execute() throws BusinessException {
 		ComprobarPalabras.comprobarPalabras(sugerencia);
 		Jpa.getManager().merge(sugerencia);
+		Jpa.getManager().merge(sugerencia.getCategoria());
 		return sugerencia;
 	}
 

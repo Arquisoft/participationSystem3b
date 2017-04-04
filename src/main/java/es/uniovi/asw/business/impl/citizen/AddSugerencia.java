@@ -19,6 +19,7 @@ public class AddSugerencia implements Command{
 
 		ComprobarPalabras.comprobarPalabras(sugerencia);
 		Jpa.getManager().persist(sugerencia); //Meter en bd
+		Jpa.getManager().merge(sugerencia.getCategoria());
 		
 		return sugerencia;
 	}

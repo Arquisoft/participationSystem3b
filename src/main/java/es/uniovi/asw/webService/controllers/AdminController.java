@@ -1,7 +1,5 @@
 package es.uniovi.asw.webService.controllers;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +24,9 @@ public class AdminController {
 	
 	@RequestMapping(value = "/crearCategoria", method = RequestMethod.POST)
     public String CrearSolicitud(HttpSession session,Model model,@RequestParam String nombre,@RequestParam String fechamin,@RequestParam String fechamax,@RequestParam String numVotos,@RequestParam String denegadas) throws BusinessException {
-    		List<Categoria> categorias = Services.getSystemServices().findAllCategories();
-    		model.addAttribute("categorias", categorias);
-    		return "crearSolicitud";
+    		Categoria categoria = new Categoria(nombre,null,null,Integer.valueOf(numVotos));
+			Services.getAdminServices().addCategoria(categoria);
+			Actions.listarSugerencias(model, null);
+    		return "listaSolicitudesadmin";
     }
 }

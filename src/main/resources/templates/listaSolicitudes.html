@@ -24,7 +24,7 @@
 				<li><a data-toggle="pill" href="#propias">Tus sugerencias</a></li>
 		</ul>
 		<div class="tab-content">
-			<tr th:each="cat : ${categorias}">
+			<tr id="bucle1" th:each="cat : ${categorias}">
 				<div th:id="${cat.nombre}" class="tab-pane fade">
 					<tr th:each="sol : ${cat.sugerencias}">	
 							<form th:action="@{/ver(sugerencia=${sol.id})}" method="POST"> 
