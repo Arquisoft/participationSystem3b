@@ -10,6 +10,7 @@ import es.uniovi.asw.business.Services;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
+import es.uniovi.asw.model.VotoComentario;
 import es.uniovi.asw.model.exception.BusinessException;
 
 public class CitizenServiceTest {
@@ -25,10 +26,10 @@ public class CitizenServiceTest {
 		assertNull(Services.getCitizenServices().findComentarioById(com.getId()));
 		Services.getCitizenServices().addComentario(com);
 		assertEquals(com, Services.getCitizenServices().findComentarioById(com.getId())); //DA ERROR AL BORRAR UN COMENTARIO QUE TENGA VOTOS
-	//	assertEquals(0, com.getVotosTotal());
-	//	VotoComentario vc = new VotoComentario(com,citizen,true);
-	//	Services.getCitizenServices().voteComentario(vc);
-	//	assertEquals(1, com.getVotosTotal());
+		assertEquals(0, com.getVotosTotal());
+		VotoComentario vc = new VotoComentario(com,citizen,true);
+		Services.getCitizenServices().voteComentario(vc);
+		assertEquals(1, com.getVotosTotal());
 		Services.getCitizenServices().deleteComentario(com.getId());
 
 		assertNull(Services.getCitizenServices().findComentarioById(com.getId()));

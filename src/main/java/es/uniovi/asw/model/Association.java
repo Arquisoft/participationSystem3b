@@ -68,6 +68,8 @@ public class Association {
 			voto._setComentario(null);
 			voto._setCitizen(null);			
 		}
+		
+	
 
 	}
 	

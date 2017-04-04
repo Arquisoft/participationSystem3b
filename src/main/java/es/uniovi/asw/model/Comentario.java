@@ -17,6 +17,8 @@ import org.eclipse.persistence.annotations.CascadeOnDelete;
 
 import com.google.gson.annotations.Expose;
 
+import es.uniovi.asw.persistence.util.Jpa;
+
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TCOMENTARIO")
@@ -28,7 +30,6 @@ public class Comentario implements Serializable{
 	private Sugerencia sugerencia;
 	@Expose private String contenido;
 	@OneToMany(mappedBy="comentario") 
-	@CascadeOnDelete
 	private Set<VotoComentario> votos = new HashSet<>();
 	
 	public Comentario(Citizen citizen, Sugerencia sugerencia, String contenido) {
@@ -88,6 +89,10 @@ public class Comentario implements Serializable{
 	}
 
 	public void borrar() {
+		for(VotoComentario vc:votos){
+			//Association.VotarComentario.unlink(this, vc, citizen);
+			Jpa.getManager().remove(vc);
+		}
 		Association.Comentar.unlink(citizen, this, sugerencia);
 	}
 	@Override
