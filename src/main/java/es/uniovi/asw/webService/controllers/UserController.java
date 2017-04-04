@@ -83,7 +83,8 @@ public class UserController {
 		    	
 	    		Sugerencia sugerencia = new Sugerencia(c,titulo,description,categoria);
 	    		Services.getCitizenServices().addSugerencia(sugerencia);
-	    		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(sugerencia));
+	    		Sugerencia sug = Services.getSystemServices().findSugerenciaById(sugerencia.getId());
+	    		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(sug));
 	    		
 	    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 				model.addAttribute("sugerencias", sugerencias);
