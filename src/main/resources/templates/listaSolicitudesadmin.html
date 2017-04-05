@@ -23,8 +23,8 @@
 			<tr th:each="cat : ${categorias}">	
 			    <li><a data-toggle="pill" th:href="@{'#' + ${cat.nombre}}"  th:text="${cat.nombre}" ></a></li>
 			</tr>
-				<li><a data-toggle="pill" href="#mas">Añadir Categoria</a></li>
-				<li><a data-toggle="pill" href="#categorias">Modificar Categorias</a></li>
+				<li><a data-toggle="pill" href="#mas" name="categorias">Añadir Categoria</a></li>
+				<li><a data-toggle="pill" href="#categorias" name="mod">Modificar Categorias</a></li>
 		</ul>
 		<div class="tab-content">
 			<tr th:each="cat : ${categorias}">
@@ -119,12 +119,12 @@
 	       		<div>
 		       		<td th:text="${cat.nombre}"></td> 
 			       	<form  style="display: inline;" th:action="@{/modificarCat(categoria=${cat.id})}" method="POST"> 
-						 	  <button id="cog" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+						 	  <button th:id="@{'edit' + ${cat.nombre}}" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 					      			<a><i id="cog" class="glyphicon glyphicon-cog"></i></a>
 					      	  </button>
 					</form>
 					<form  style="display: inline;" th:action="@{/eliminarCategoria(categoria=${cat.id})}" method="POST"> 
-						 	  <button id="cog" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+						 	  <button th:id="@{'elimin' + ${cat.nombre}}" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 					      			<a><i id="cog" class="glyphicon glyphicon-remove-circle"></i></a>
 					      	  </button>
 					</form>

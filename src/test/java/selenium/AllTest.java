@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
@@ -48,6 +49,36 @@ public class AllTest {
 		
 		SeleniumUtils.escribirInput(driver, "titulo", "Prueba");
 		SeleniumUtils.clickButton(driver, "add");
+	}
+	
+	@Test
+	public void BasicAdminTasks() {
+		driver.get(baseUrl+"/");
+		SeleniumUtils.entrarComoAdmin(driver);
+		/*
+		driver.findElement(By.name("categorias")).click();
+		driver.findElement(By.name("nombre")).sendKeys("TestCat");
+		SeleniumUtils.escribirInput(driver, "fechamin", "01/03/2017");
+		SeleniumUtils.escribirInput(driver, "fechamax", "01/03/2018");
+		SeleniumUtils.escribirInput(driver, "numVotos", "18");
+		SeleniumUtils.escribirInput(driver, "denegadas", "test;test1;test2");
+		SeleniumUtils.clickButton(driver, "crear");
+		
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "salir", 10);
+		SeleniumUtils.textoPresentePagina(driver, "TestCat");
+
+		SeleniumUtils.clickButton(driver, "editTestCat");
+		
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "guardarcambios", 10);
+		SeleniumUtils.textoPresentePagina(driver, "test;test1;test2");
+		SeleniumUtils.clickButton(driver, "atrasBoton");
+		
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "salir", 10);
+
+		SeleniumUtils.clickButton(driver, "eliminTestCat");
+		
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "salir", 10);
+		SeleniumUtils.textoNoPresentePagina(driver, "TestCat");*/
 	}
 
 }
