@@ -20,7 +20,7 @@ public class Log {
 	
 	public static void config() {
 		try {
-			FileHandler file = new FileHandler("src/test/resources/Log.log", true);
+			FileHandler file = new FileHandler("src/test/java/resources/Log.log", true);
 			file.setFormatter(new LogFormatter());
 			logger.addHandler(file);
 			logger.setUseParentHandlers(false);

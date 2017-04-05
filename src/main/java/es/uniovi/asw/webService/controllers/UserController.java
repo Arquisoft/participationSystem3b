@@ -85,7 +85,7 @@ public class UserController {
 	    		Services.getCitizenServices().addSugerencia(sugerencia);
 	    		Sugerencia sug = Services.getSystemServices().findSugerenciaById(sugerencia.getId());
 	    		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(sug));
-	    		
+
 	    		List<Sugerencia> sugerencias = Services.getSystemServices().findAllSugerencias();
 				model.addAttribute("sugerencias", sugerencias);
 				Actions.listarSugerencias(model, c);
@@ -161,6 +161,7 @@ public class UserController {
 	    	
 	    	try {
 	    		Services.getCitizenServices().voteComentario(voto);
+	    		kafkaProducer.send(Topics.VOTE_COMMENT, Message.setMessage(voto));
 	    	} catch (Exception e) {
 	    		
 	    	}

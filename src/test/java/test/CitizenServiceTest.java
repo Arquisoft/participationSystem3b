@@ -28,6 +28,7 @@ public class CitizenServiceTest {
 		
 		Comentario com = new Comentario(citizen, sugerencias.get(0), "comentario de prueba2");
 		
+		assertEquals(citizen,com.getCitizen());
 		assertNull(Services.getCitizenServices().findComentarioById(com.getId()));
 		Services.getCitizenServices().addComentario(com);
 		assertEquals(com, Services.getCitizenServices().findComentarioById(com.getId()));
@@ -37,6 +38,10 @@ public class CitizenServiceTest {
 		assertEquals(1, com.getVotosTotal());
 		Services.getCitizenServices().deleteComentario(com.getId());
 
+		com.setContenido("hola");
+		assertEquals(com.getContenido(),"hola");
+		
+		
 		assertNull(Services.getCitizenServices().findComentarioById(com.getId()));
 	}
 	

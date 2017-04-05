@@ -16,6 +16,7 @@ import javax.annotation.ManagedBean;
 public class KafkaProducer {
 
     private static final Logger logger = Logger.getLogger(KafkaProducer.class);
+   
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
