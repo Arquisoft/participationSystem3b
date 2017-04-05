@@ -1,26 +1,63 @@
-package selenium;
+package steps;
 
 import java.util.concurrent.TimeUnit;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import es.uniovi.asw.Application;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = Application.class)
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class AllTest {
 	
-	 private static WebDriver driver;
-	 private static String baseUrl;
+	 private static WebDriver driver = new HtmlUnitDriver();
+	 private static String baseUrl = "http://localhost:8080";
 	 
-	@BeforeClass
+	//@BeforeClass
 	public static void setUp() throws Exception {
-		Application.main(new String[] {});
+		//Application.main(new String[] {});
 		driver = new HtmlUnitDriver();
 		baseUrl = "http://localhost:8080";
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+	}
+	
+	@Given("^the user is on the login page$")
+	  public void a_list_of_users() throws Throwable {
+		driver.get(baseUrl+"/");
+		SeleniumUtils.entrarComoUsuario(driver);
+			
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "crear", 10);
+		SeleniumUtils.textoPresentePagina(driver, "Crea tu propuesta");
+	 }
+	
+	@When("^I login with name \"([^\"]*)\" and password \"([^\"]*)\"$")
+	public void i_login_with_name_and_password(String arg1, String arg2) throws Throwable {
+		driver.get(baseUrl+"/");
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "loginButton", 10);
+		SeleniumUtils.escribirInput(driver, "username", arg1);
+		
+		SeleniumUtils.clickButton(driver, "loginButton");
+	}
+	
+	@Then("^I receive a list of suggestions, with \"([^\"]*)\"$")
+	public void i_receive_a_list_of_suggestions_with(String arg1) throws Throwable {
+		driver.get(baseUrl+"/");
+		SeleniumUtils.entrarComoUsuario(driver);
+			
+		SeleniumUtils.EsperaCargaPagina(driver, "id", "crear", 10);
+		SeleniumUtils.textoPresentePagina(driver, arg1);
 	}
 	
 	@Test

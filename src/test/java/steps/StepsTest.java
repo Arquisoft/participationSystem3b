@@ -1,4 +1,4 @@
-package steps;
+/*package steps;
 
 import java.util.List;
 import java.util.Map;
@@ -12,11 +12,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import es.uniovi.asw.webService.controllers.MainController;
 
-public class ExampleSteps {
+public class StepsTest {
   
   private static final Logger LOG = LoggerFactory.getLogger(MainController.class);
 
-  @Given("^a list of users:$")
+  @Given("^the user is on the login page$")
   public void a_list_of_users(List<User> users) throws Throwable {
     for (User u: users) {
       System.out.println("Inserting user..." + u.name + " - " + u.password);
@@ -37,4 +37,4 @@ public class ExampleSteps {
     private String name;
     private String password;
   }
-}
+}*/

@@ -1,4 +1,4 @@
-package selenium;
+package steps;
 
 import java.util.List;
 
