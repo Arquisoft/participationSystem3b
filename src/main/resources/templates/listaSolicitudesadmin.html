@@ -7,47 +7,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script>
-$(document).ready(function() {
-    $('#datePicker')
-        .datepicker({
-            format: 'mm/dd/yyyy'
-        })
-        .on('changeDate', function(e) {
-            // Revalidate the date field
-            $('#eventForm').formValidation('revalidateField', 'date');
-        });
-
-    $('#eventForm').formValidation({
-        framework: 'bootstrap',
-        icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            name: {
-                validators: {
-                    notEmpty: {
-                        message: 'The name is required'
-                    }
-                }
-            },
-            date: {
-                validators: {
-                    notEmpty: {
-                        message: 'The date is required'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY',
-                        message: 'The date is not a valid'
-                    }
-                }
-            }
-        }
-    });
-});
-</script>
       <title>Lista de solicitudes</title>
 </head>
 <body>
@@ -56,19 +15,8 @@ $(document).ready(function() {
 	     		Salir de tu cuenta
 	 			</button>
 	 </form>
-	<form th:action="@{/modificarCat}" method="POST"> 
-		<p>
-			<button id="Mod" type="submit" name="modcat" class="btn btn-primary">
-		     Administrar categoria:
-		 	</button>
-	       	<select name="category"> 
-	       	<tr th:each="cat : ${categorias}">
-			  <option th:value="${cat}" th:text="${cat.nombre}"></option>
-			 </tr>
-			</select>
-			
-		</p>
-	 </form>
+	
+
 	<div class="container">
 		<ul class="nav nav-tabs">
 				<li class="active"><a data-toggle="pill" href="#todo">Todo</a></li>
@@ -76,6 +24,7 @@ $(document).ready(function() {
 			    <li><a data-toggle="pill" th:href="@{'#' + ${cat.nombre}}"  th:text="${cat.nombre}" ></a></li>
 			</tr>
 				<li><a data-toggle="pill" href="#mas">Añadir Categoria</a></li>
+				<li><a data-toggle="pill" href="#categorias">Modificar Categorias</a></li>
 		</ul>
 		<div class="tab-content">
 			<tr th:each="cat : ${categorias}">
@@ -162,8 +111,28 @@ $(document).ready(function() {
                 <button id="crear" type="submit" class="btn btn-primary">Crear</button>
             </form>
         </div>
+        
 			</div>
-
+		<div th:id="categorias" class="tab-pane fade">
+				<div class="col-xs-6 col-xs-offset-3">
+	       	<tr th:each="cat : ${categorias}">
+	       		<div>
+		       		<td th:text="${cat.nombre}"></td> 
+			       	<form  style="display: inline;" th:action="@{/modificarCat(categoria=${cat.id})}" method="POST"> 
+						 	  <button id="cog" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+					      			<a><i id="cog" class="glyphicon glyphicon-cog"></i></a>
+					      	  </button>
+					</form>
+					<form  style="display: inline;" th:action="@{/eliminarCategoria(categoria=${cat.id})}" method="POST"> 
+						 	  <button id="cog" type="submit" name="cog" class="btn btn-primary" style="background-color: white; border-color: transparent;">
+					      			<a><i id="cog" class="glyphicon glyphicon-remove-circle"></i></a>
+					      	  </button>
+					</form>
+				</div>
+			</tr>
+		</div>
+        
+			</div>
 		</div>
 	</div>
 </body>
