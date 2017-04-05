@@ -42,7 +42,7 @@
 				      						<a><i id="cog" class="glyphicon glyphicon-cog"></i></a>
 				      					 </button>
 				       			</form>	
-				       			<form style="display: inline;" th:action="@{/eliminar}" method="POST"> 
+				       			<form style="display: inline;" th:action="@{/eliminar(sugerencia=${sol.id})}" method="POST"> 
 				       				  <button id="eliminar" type="submit" name="eliminar" th:value="${sol.titulo}" class="btn btn-primary" style="background-color: white; border-color: transparent;">
 				      						<a><i id="eye" class="glyphicon glyphicon-remove-circle"></i></a>
 				      					 </button>
